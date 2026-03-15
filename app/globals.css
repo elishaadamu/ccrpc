@@ -33,121 +33,364 @@ body {
   transform: rotate(180deg);
 }
 
-/* Ensure USWDS nav links are flex when using custom icons */
-.usa-nav__link.display-flex {
+/* Ensure Custom nav links are flex when using custom icons */
+.custom-nav__link.display-flex {
   display: flex !important;
   align-items: center;
 }
 
-.usa-nav__mobile-icon {
+.custom-nav__mobile-icon {
   display: none;
 }
 
-.usa-nav__desktop-icon {
+.custom-nav__desktop-icon {
   display: inline-block;
 }
 
-@media (max-width: 63.99em) {
-  .usa-nav__mobile-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Header & Navbar Base */
+.custom-header {
+  background-color: white;
+  border-bottom: 1px solid #e6e6e6;
+  width: 100%;
+}
+
+.custom-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.custom-header--extended {
+  border-bottom: none;
+}
+
+
+.custom-logo {
+  margin: 0;
+}
+
+.custom-logo__text {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.custom-logo__text a {
+  color: #1b1b1b;
+  text-decoration: none;
+}
+
+.custom-menu-btn {
+  display: none; /* Desktop hidden */
+}
+
+/* Navigation Base */
+.custom-nav {
+  background-color: white;
+  width: 100%;
+  border-top: 1px solid #e1e4e8; /* More prominent line */
+}
+
+.custom-nav__inner {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+.custom-nav__close {
+  display: none;
+}
+
+.custom-nav__primary {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.custom-nav__primary-item {
+  position: relative;
+}
+
+.custom-nav__primary-item > button,
+.custom-nav__primary-item > a {
+  display: flex;
+  align-items: center;
+  padding: 0.85rem 1rem; /* Slightly more padding */
+  color: #3d4551;
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-size: 1rem; /* Better balance between size and fit */
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  border-bottom: 4px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.custom-nav__primary-item > button:hover,
+.custom-nav__primary-item > a:hover {
+  color: #005ea2;
+}
+
+.custom-nav__primary-item button.custom-current,
+.custom-nav__primary-item a.custom-current {
+  color: #005ea2;
+  border-bottom: 4px solid #005ea2;
+}
+
+
+/* Submenu Desktop */
+.custom-nav__submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #112e51; /* Dark navy from screenshot */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  min-width: 18rem;
+  z-index: 1000;
+  display: none;
+  border: 1px solid #2491ff; /* Subtle blue border */
+  border-top: none;
+}
+
+.custom-nav__submenu.is-visible {
+  display: block !important;
+}
+
+.custom-nav__submenu-list {
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+}
+
+.custom-nav__submenu-item a {
+  display: block;
+  padding: 1rem 1.5rem;
+  color: white; /* White text on dark background */
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: background-color 0.2s;
+}
+
+.custom-nav__submenu-item a:hover {
+  background-color: #264a7a;
+  color: white;
+}
+
+/* Dropdown Trigger Active State */
+@media (min-width: 64em) {
+  .custom-nav__primary-item > button[aria-expanded="true"] {
+    background-color: #112e51 !important;
+    color: white !important;
+    position: relative;
+    z-index: 1001;
+    border: 1px solid #2491ff;
+    border-bottom: 2px solid #2491ff;
   }
-  .usa-nav__desktop-icon {
-    display: none !important;
+  
+  .custom-nav__primary-item > button[aria-expanded="true"] .custom-nav__desktop-icon {
+    transform: rotate(180deg);
+    color: white;
   }
 }
 
-/* Mobile Nav Fixes */
+
+/* Secondary Links/Utility Links */
+.custom-nav__secondary {
+  display: flex;
+  align-items: center;
+}
+
+.custom-nav__secondary-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.custom-nav__secondary-item {
+  display: flex;
+  align-items: center;
+}
+
+.custom-nav__secondary-item a {
+  color: #71767a;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.custom-nav__secondary-item a:hover {
+  text-decoration: underline;
+}
+
+/* Vertical separator between utility links */
+.custom-nav__secondary-item:not(:last-child)::after {
+  content: "|";
+  margin-left: 1rem;
+  margin-right: -0.5rem;
+  color: #adadad;
+}
+
+/* Visibility Helpers */
+.desktop-only {
+  display: flex !important;
+}
+.mobile-only {
+  display: none !important;
+}
+
 @media (max-width: 63.99em) {
-  .usa-header .usa-navbar {
+  .desktop-only {
+    display: none !important;
+  }
+  .mobile-only {
     display: flex !important;
-    justify-content: space-between;
+  }
+}
+
+.display-none {
+  display: none !important;
+}
+
+
+
+
+/* Mobile Nav Overrides */
+@media (max-width: 63.99em) {
+  .custom-nav__mobile-icon {
+    display: flex !important;
     align-items: center;
-    width: 100%;
-    padding: 0 1rem;
-    height: auto;
-    min-height: 4rem;
+    justify-content: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    flex-shrink: 0;
+    color: #565c65 !important;
+  }
+  .custom-nav__desktop-icon {
+    display: none !important;
   }
 
-  .usa-logo {
-    margin: 0 !important;
+  .custom-navbar {
+    padding: 0 0rem 0 1rem;
+    min-height: 4rem;
+    width: 100%;
+  }
+
+  .custom-logo {
     max-width: 70%;
   }
 
-  .usa-menu-btn {
-    display: block !important;
+  .custom-menu-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
     background-color: #005ea2;
     color: white;
-    padding: 0.5rem 1rem;
     border: none;
+    height: 4.5rem !important;
+
+    border-radius: 0 !important;
     cursor: pointer;
     font-weight: bold;
     text-transform: uppercase;
+    width: 4.5rem !important;
+    padding: 0;
   }
 
-  .usa-nav {
+  .custom-nav {
     display: flex !important;
     position: fixed;
     top: 0;
-    right: -100%; /* Start off-screen */
+    right: -100% !important;
     bottom: 0;
     width: 18rem !important;
     max-width: 18rem;
     background-color: white;
-    z-index: 1000;
+    z-index: 2000;
     overflow-y: auto;
-    padding: 0; /* Removing padding to allow items to be full width */
+    padding: 0;
     box-shadow: -2px 0 10px rgba(0,0,0,0.3);
     flex-direction: column !important;
     transition: right 0.3s ease-in-out;
   }
 
-  .usa-nav.is-visible {
+  .custom-nav.is-visible {
     right: 0 !important;
   }
 
-  .usa-nav__inner {
-    padding-top: 4rem; /* Space for close button */
+  .custom-nav__inner {
+    padding-top: 4rem;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
   }
 
-  /* Make nav items vertical on mobile */
-  .usa-nav__primary {
+  .custom-nav__close {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem !important; /* Match menu button size */
+    height: 4.5rem !important;
+    position: absolute;
+    top: 0;
+    right: 0; 
+    z-index: 2001;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 0 !important;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .custom-nav__close:focus {
+    border: 1px solid #565c65 !important;
+    outline: none;
+  }
+
+  .custom-nav__primary {
     flex-direction: column !important;
     width: 100%;
-    margin-top: 0 !important;
-    border-top: 1px solid #e6e6e6; /* List top border */
+    border-top: 1px solid #e6e6e6;
   }
 
-  .usa-nav__primary-item {
+  .custom-nav__primary-item {
     width: 100%;
-    border-bottom: 1px solid #e6e6e6; /* List item bottom border */
-    position: relative;
+    border-bottom: 1px solid #e6e6e6;
+    border-left: 1px solid #e6e6e6;
+    border-right: 1px solid #e6e6e6;
   }
 
-  .usa-nav__primary-item button {
+  .custom-nav__primary-item > button {
     width: 100%;
     display: flex !important;
     justify-content: space-between;
     align-items: center;
-    padding: 0.85rem 1rem !important; /* Tighter padding */
-    background: transparent !important;
-    background-image: none !important;
+    padding: 0 0 0 1rem !important; /* Content padding */
     border: none;
-    text-align: left;
-    color: #565c65; /* Lighter grey for inactive */
-    font-weight: 400; 
-    font-size: 0.95rem; /* Reduced to match screenshot exactly */
+    background: transparent !important;
+    min-height: 4.5rem;
   }
 
-  .usa-nav__primary-item button.usa-current {
-    background-color: #f2f6f9 !important; /* Very subtle blue background on active */
-    color: #005ea2 !important; /* Blue for active */
-    font-weight: 700 !important; /* Bold for active */
+  .custom-nav__primary-item button.custom-current {
+    background-color: #f2f6f9 !important;
+    color: #005ea2 !important;
+    border-bottom: none;
   }
 
-  /* Indicators for current page/section */
-  .usa-nav__primary-item button.usa-current::before {
+  .custom-nav__primary-item button.custom-current::before {
     content: '';
     position: absolute;
     left: 0;
@@ -157,96 +400,36 @@ body {
     background-color: #005ea2;
   }
 
-  .usa-nav__mobile-icon {
-    display: flex !important;
-    align-items: center;
-    color: #565c65 !important;
-  }
-  
-  .usa-nav__desktop-icon {
-    display: none !important;
-  }
-
-  .usa-nav__submenu {
+  .custom-nav__submenu {
     position: static !important;
     width: 100% !important;
-    background-color: white !important; /* Submenu is white in reference */
     box-shadow: none !important;
-    padding-left: 0 !important; /* Removed generic padding */
-    border-top: none;
+    background-color: white !important;
   }
 
-  .usa-nav__submenu-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  .custom-nav__submenu-item {
+    border-top: 1px solid #e6e6e6;
   }
 
-  .usa-nav__submenu-item {
-    margin: 0;
-    border-top: 1px solid #e6e6e6; /* Dividers exist between subitems */
+  .custom-nav__submenu-item a {
+    padding: 0.85rem 1rem 0.85rem 2.5rem;
+    color: #565c65 !important;
+    font-size: 0.95rem;
   }
 
-  .usa-nav__submenu-item a,
-  .usa-nav__submenu-item button {
-    display: block;
-    padding: 0.85rem 1rem 0.85rem 2.5rem; /* Heavy left indent, matches parent padding */
-    color: #565c65;
-    text-decoration: none;
-    font-size: 0.85rem; /* Even smaller for submenus */
-  }
-
-  .usa-nav__submenu-item a:hover {
-    text-decoration: underline;
-  }
-
-  .usa-nav__submenu.is-visible {
-    display: block !important;
-  }
-
-  .usa-nav__close {
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    width: 2.5rem; /* Larger tap target */
-    height: 2.5rem;
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem; 
-    z-index: 1001;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-  }
-
-  .usa-nav__secondary {
-    margin-top: 1rem; 
-    order: 3;
+  .custom-nav__secondary {
+    margin-top: 1rem;
     width: 100%;
     padding: 1rem;
+    order: 3;
   }
 
-  .usa-nav__secondary-links {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  .custom-nav__secondary-links {
     gap: 1rem;
-    justify-content: flex-start;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .usa-nav__secondary-item a {
-    color: #565c65;
-    text-decoration: none;
-    font-size: 0.85rem; 
-    white-space: nowrap; 
   }
 
   /* Overlay */
-  .usa-overlay.is-visible {
+  .custom-overlay.is-visible {
     display: block !important;
     opacity: 0.5 !important;
     visibility: visible !important;
@@ -256,15 +439,36 @@ body {
     width: 100%;
     height: 100%;
     background: black;
-    z-index: 900;
+    z-index: 1500;
   }
 }
 
 /* Sidebar Responsive Spacing */
 @media (max-width: 63.99em) {
+  /* Only target the grid row that contains the side nav and main content */
+  .usa-section .grid-row {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  /* Ensure footer social links stay horizontal */
+  .usa-footer .grid-row {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+  }
+
+  /* Specifically the contact heading and address might need stacking but social links should be row */
+  .usa-footer__social-links.grid-row {
+    flex-direction: row !important;
+  }
+
   .usa-layout-docs__sidenav {
+    order: -1 !important;
     margin-bottom: 2rem;
     width: 100% !important;
+  }
+  .usa-layout-docs__main {
+    order: 1 !important;
   }
 }
 
@@ -321,4 +525,10 @@ body {
   padding: 0 !important;
   margin: 0 !important;
   display: inline-block !important; /* Legend items are usually inline-block */
+}
+.usa-footer__social-links a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

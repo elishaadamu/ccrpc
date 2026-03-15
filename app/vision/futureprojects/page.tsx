@@ -98,7 +98,7 @@ export default function FutureProjects() {
         <div className="usa-section">
           <div className="grid-container">
             <div className="grid-row grid-gap">
-              <aside className="usa-layout-docs__sidenav desktop:grid-col-3">
+              <aside className="usa-layout-docs__sidenav grid-col-12 desktop:grid-col-3">
                 <SideNav items={[
                   { href: "/vision/futureprojects", label: "Future Projects", active: true },
                   { href: "#future-projects-regionally-significant-vision-projects", label: "Regionally Significant Vision Projects" },
@@ -107,7 +107,8 @@ export default function FutureProjects() {
                 ]} />
               </aside>
 
-              <div className="usa-layout-docs__main desktop:grid-col-9 usa-prose">
+              <div className="usa-layout-docs__main grid-col-12 desktop:grid-col-9 usa-prose">
+                <h1>Future Projects</h1>
                 <p>
                   Public input regarding the <em>future</em> transportation system came from responses to a question asking people to prioritize the three most important factors that will shape our transportation system over the next 25 years. The combined input about the current and future transportation system conveyed strong public support for a set of overlapping ideas about the future of transportation: a more environmentally sustainable transportation system, additional pedestrian and bicycle infrastructure, shorter off-campus transit times, equitable access to transportation services, and a compact urban area that supports active transportation and limits sprawl development.
                 </p>

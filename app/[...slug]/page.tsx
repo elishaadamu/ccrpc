@@ -129,11 +129,13 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
           <div className="grid-container">
             <div className="grid-row grid-gap">
               {sideNavItems.length > 0 && (
-                <aside className="usa-layout-docs__sidenav desktop:grid-col-3">
+                <aside className="usa-layout-docs__sidenav grid-col-12 desktop:grid-col-3">
                   <SideNav items={sideNavItems} />
                 </aside>
               )}
-              <div className={`usa-layout-docs__main ${sideNavItems.length > 0 ? 'desktop:grid-col-9' : 'grid-col-12'} usa-prose`}>
+              <div className={`usa-layout-docs__main grid-col-12 ${sideNavItems.length > 0 ? 'desktop:grid-col-9' : ''} usa-prose`}>
+                <h1>{heroTitle}</h1>
+
                 <MarkdownRenderer 
                   content={mainContent}
                   baseUrl={slugPath}
