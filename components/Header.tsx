@@ -1,15 +1,28 @@
 "use client";
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import { ChevronDown, X, Menu } from 'lucide-react';
+import { ChevronDown, X, Menu, Plus, Minus } from 'lucide-react';
 
 export default function Header() {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = (menuName: string) => {
     setActiveMenu(activeMenu === menuName ? null : menuName);
+  };
+
+  const isPathActive = (prefix: string) => {
+    if (!pathname) return false;
+    if (prefix === 'overview' && pathname.startsWith('/overview')) return true;
+    if (prefix === 'conditions' && pathname.startsWith('/existing-conditions')) return true;
+    if (prefix === 'goals' && pathname.startsWith('/goals')) return true;
+    if (prefix === 'vision' && pathname.startsWith('/vision')) return true;
+    if (prefix === 'process' && pathname.startsWith('/process')) return true;
+    if (prefix === 'appendices' && pathname.startsWith('/data')) return true;
+    return false;
   };
 
   // Close menus when clicking outside
@@ -46,21 +59,26 @@ export default function Header() {
           <button 
             className="usa-nav__close" 
             onClick={() => setMobileMenuOpen(false)}
+            aria-label="Close menu"
           >
-            <X size={24} />
+            <X size={24} strokeWidth={4} className="text-gray-700" />
           </button>
+          
           <ul className="usa-nav__primary usa-accordion">
             <li className="usa-nav__primary-item">
               <button 
-                className={`usa-accordion__button usa-nav__link display-flex flex-align-center ${activeMenu === 'overview' ? 'usa-current' : ''}`}
+                className={`usa-accordion__button usa-nav__link ${isPathActive('overview') ? 'usa-current' : ''}`}
                 aria-expanded={activeMenu === 'overview'}
                 aria-controls="extended-nav-section-0"
                 onClick={() => toggleMenu('overview')}
               >
                 <span>Overview</span>
-                <ChevronDown size={16} className={`margin-left-1 transition-transform ${activeMenu === 'overview' ? 'rotate-180' : ''}`} />
+                <span className="usa-nav__mobile-icon">
+                  {activeMenu === 'overview' ? <Minus size={18} strokeWidth={3} /> : <Plus size={18} strokeWidth={3} />}
+                </span>
+                <ChevronDown size={16} className="usa-nav__desktop-icon margin-left-1" />
               </button>
-              <div id="extended-nav-section-0" className={`usa-nav__submenu ${activeMenu === 'overview' ? '' : 'display-none'}`} hidden={activeMenu !== 'overview'}>
+              <div id="extended-nav-section-0" className={`usa-nav__submenu ${activeMenu === 'overview' ? 'is-visible' : 'display-none'}`} hidden={activeMenu !== 'overview'}>
                 <ul className="usa-nav__submenu-list">
                   <li className="usa-nav__submenu-item">
                     <Link href="/overview/introduction" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>Executive Summary</Link>
@@ -74,15 +92,18 @@ export default function Header() {
 
             <li className="usa-nav__primary-item">
               <button 
-                className={`usa-accordion__button usa-nav__link display-flex flex-align-center ${activeMenu === 'conditions' ? 'usa-current' : ''}`}
+                className={`usa-accordion__button usa-nav__link ${isPathActive('conditions') ? 'usa-current' : ''}`}
                 aria-expanded={activeMenu === 'conditions'}
                 aria-controls="extended-nav-section-1"
                 onClick={() => toggleMenu('conditions')}
               >
                 <span>Existing Conditions</span>
-                <ChevronDown size={16} className={`margin-left-1 transition-transform ${activeMenu === 'conditions' ? 'rotate-180' : ''}`} />
+                <span className="usa-nav__mobile-icon">
+                  {activeMenu === 'conditions' ? <Minus size={18} strokeWidth={3} /> : <Plus size={18} strokeWidth={3} />}
+                </span>
+                <ChevronDown size={16} className="usa-nav__desktop-icon margin-left-1" />
               </button>
-              <div id="extended-nav-section-1" className={`usa-nav__submenu ${activeMenu === 'conditions' ? '' : 'display-none'}`} hidden={activeMenu !== 'conditions'}>
+              <div id="extended-nav-section-1" className={`usa-nav__submenu ${activeMenu === 'conditions' ? 'is-visible' : 'display-none'}`} hidden={activeMenu !== 'conditions'}>
                 <ul className="usa-nav__submenu-list">
                   <li className="usa-nav__submenu-item">
                     <Link href="/existing-conditions/demographics" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>Demographics</Link>
@@ -105,15 +126,18 @@ export default function Header() {
 
             <li className="usa-nav__primary-item">
               <button 
-                className={`usa-accordion__button usa-nav__link display-flex flex-align-center ${activeMenu === 'goals' ? 'usa-current' : ''}`}
+                className={`usa-accordion__button usa-nav__link ${isPathActive('goals') ? 'usa-current' : ''}`}
                 aria-expanded={activeMenu === 'goals'}
                 aria-controls="extended-nav-section-2"
                 onClick={() => toggleMenu('goals')}
               >
                 <span>Goals</span>
-                <ChevronDown size={16} className={`margin-left-1 transition-transform ${activeMenu === 'goals' ? 'rotate-180' : ''}`} />
+                <span className="usa-nav__mobile-icon">
+                  {activeMenu === 'goals' ? <Minus size={18} strokeWidth={3} /> : <Plus size={18} strokeWidth={3} />}
+                </span>
+                <ChevronDown size={16} className="usa-nav__desktop-icon margin-left-1" />
               </button>
-              <div id="extended-nav-section-2" className={`usa-nav__submenu ${activeMenu === 'goals' ? '' : 'display-none'}`} hidden={activeMenu !== 'goals'}>
+              <div id="extended-nav-section-2" className={`usa-nav__submenu ${activeMenu === 'goals' ? 'is-visible' : 'display-none'}`} hidden={activeMenu !== 'goals'}>
                 <ul className="usa-nav__submenu-list">
                   <li className="usa-nav__submenu-item">
                     <Link href="/goals/overview" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>Measuring Progress</Link>
@@ -139,15 +163,18 @@ export default function Header() {
 
             <li className="usa-nav__primary-item">
               <button 
-                className={`usa-accordion__button usa-nav__link display-flex flex-align-center ${activeMenu === 'vision' ? 'usa-current' : ''}`}
+                className={`usa-accordion__button usa-nav__link ${isPathActive('vision') ? 'usa-current' : ''}`}
                 aria-expanded={activeMenu === 'vision'}
                 aria-controls="extended-nav-section-3"
                 onClick={() => toggleMenu('vision')}
               >
                 <span>2045 Vision</span>
-                <ChevronDown size={16} className={`margin-left-1 transition-transform ${activeMenu === 'vision' ? 'rotate-180' : ''}`} />
+                <span className="usa-nav__mobile-icon">
+                  {activeMenu === 'vision' ? <Minus size={18} strokeWidth={3} /> : <Plus size={18} strokeWidth={3} />}
+                </span>
+                <ChevronDown size={16} className="usa-nav__desktop-icon margin-left-1" />
               </button>
-              <div id="extended-nav-section-3" className={`usa-nav__submenu ${activeMenu === 'vision' ? '' : 'display-none'}`} hidden={activeMenu !== 'vision'}>
+              <div id="extended-nav-section-3" className={`usa-nav__submenu ${activeMenu === 'vision' ? 'is-visible' : 'display-none'}`} hidden={activeMenu !== 'vision'}>
                 <ul className="usa-nav__submenu-list">
                   <li className="usa-nav__submenu-item">
                     <Link href="/vision/futureprojects" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>Future Projects</Link>
@@ -167,15 +194,18 @@ export default function Header() {
 
             <li className="usa-nav__primary-item">
               <button 
-                className={`usa-accordion__button usa-nav__link display-flex flex-align-center ${activeMenu === 'process' ? 'usa-current' : ''}`}
+                className={`usa-accordion__button usa-nav__link ${isPathActive('process') ? 'usa-current' : ''}`}
                 aria-expanded={activeMenu === 'process'}
                 aria-controls="extended-nav-section-4"
                 onClick={() => toggleMenu('process')}
               >
                 <span>Public Involvement</span>
-                <ChevronDown size={16} className={`margin-left-1 transition-transform ${activeMenu === 'process' ? 'rotate-180' : ''}`} />
+                <span className="usa-nav__mobile-icon">
+                  {activeMenu === 'process' ? <Minus size={18} strokeWidth={3} /> : <Plus size={18} strokeWidth={3} />}
+                </span>
+                <ChevronDown size={16} className="usa-nav__desktop-icon margin-left-1" />
               </button>
-              <div id="extended-nav-section-4" className={`usa-nav__submenu ${activeMenu === 'process' ? '' : 'display-none'}`} hidden={activeMenu !== 'process'}>
+              <div id="extended-nav-section-4" className={`usa-nav__submenu ${activeMenu === 'process' ? 'is-visible' : 'display-none'}`} hidden={activeMenu !== 'process'}>
                 <ul className="usa-nav__submenu-list">
                   <li className="usa-nav__submenu-item">
                     <Link href="/process/public-involvement" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>Overview</Link>
@@ -195,15 +225,18 @@ export default function Header() {
 
             <li className="usa-nav__primary-item">
               <button 
-                className={`usa-accordion__button usa-nav__link display-flex flex-align-center ${activeMenu === 'appendices' ? 'usa-current' : ''}`}
+                className={`usa-accordion__button usa-nav__link ${isPathActive('appendices') ? 'usa-current' : ''}`}
                 aria-expanded={activeMenu === 'appendices'}
                 aria-controls="extended-nav-section-5"
                 onClick={() => toggleMenu('appendices')}
               >
                 <span>Appendices</span>
-                <ChevronDown size={16} className={`margin-left-1 transition-transform ${activeMenu === 'appendices' ? 'rotate-180' : ''}`} />
+                <span className="usa-nav__mobile-icon">
+                  {activeMenu === 'appendices' ? <Minus size={18} strokeWidth={3} /> : <Plus size={18} strokeWidth={3} />}
+                </span>
+                <ChevronDown size={16} className="usa-nav__desktop-icon margin-left-1" />
               </button>
-              <div id="extended-nav-section-5" className={`usa-nav__submenu ${activeMenu === 'appendices' ? '' : 'display-none'}`} hidden={activeMenu !== 'appendices'}>
+              <div id="extended-nav-section-5" className={`usa-nav__submenu ${activeMenu === 'appendices' ? 'is-visible' : 'display-none'}`} hidden={activeMenu !== 'appendices'}>
                 <ul className="usa-nav__submenu-list">
                   <li className="usa-nav__submenu-item">
                     <Link href="/data/tpm" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>System Performance Report</Link>
@@ -218,14 +251,15 @@ export default function Header() {
               </div>
             </li>
           </ul>
+
           <div className="usa-nav__secondary">
             <ul className="usa-nav__secondary-links">
               <li className="usa-nav__secondary-item">
-                <a href="https://ccrpc.org/divisions/planning_and_development/transportation/index.php"> CUUATS Home Page </a>
+                <a href="https://ccrpc.org/divisions/planning_and_development/transportation/index.php">CUUATS Home Page</a>
               </li>
               <li className="usa-nav__secondary-item">
                 <Link href="/contact" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>
-                  <span>Contact</span>
+                  Contact
                 </Link>
               </li>
             </ul>
