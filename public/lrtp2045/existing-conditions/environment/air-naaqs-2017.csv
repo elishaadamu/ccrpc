@@ -1,0 +1,12 @@
+Pollutant,Duration,Level,Form of Measurement,"Champaign County
+Monitoring Stations"
+Carbon Monoxide,8 hours,9000 ppb,Not to be exceeded more than once per year,Bondville
+Carbon Monoxide,1 hour,35000 ppb,Not to be exceeded more than once per year,Bondville
+Nitrogen Dioxide,1 hour,100 ppb,"98th percentile of 1-hour daily maximum concentrations, 3 year average",None
+Nitrogen Dioxide,1 year,53 ppb,Annual average,None
+Ozone,8 hours,70 ppb,"Annual fourth-highest daily maximum 8-hour concentration, 3 year average","Bondville, Thomasboro"
+Sulfur Dioxide,1 hour,75 ppb,"99th percentile of 1-hour daily maximum concentrations, 3 year average",Bondville
+Lead,3 months,0.15 mcg/m3,"Rolling average, not to be exceeded",None
+Particulate Matter (PM2.5),1 year,12 mcg/m3,"Annual average, averaged over 3 years","Bondville, Champaign"
+Particulate Matter (PM2.5),24 hours,35 mcg/m3,"98th percentile, averaged over 3 years","Bondville, Champaign"
+Particulate Matter (PM10),24 hours,150 mcg/m3,Not to be exceeded more than once per year on average over 3 years,None

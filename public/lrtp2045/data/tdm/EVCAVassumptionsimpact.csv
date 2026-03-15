@@ -1,0 +1,14 @@
+﻿Uncertainty,Source of uncertainty,CUUATS TDM 2045 Scenarios Assumptions
+Market penetration and use of AVs,Demand Side,Assumed 35 percent AV travel. This assumption cannot be validated through the TDM as the model does not have a mode choice option for C/AVs.
+Different capacity consumption by CAVs,Supply Side,Assumed 50 percent capacity increase on freeways (source: WSP) and 10 percent capacity increase on arterials (source: WSP). 
+Decreased disutility of travel time,Demand Side,"Change in driver perception of time is expected due to C/AVs as drivers can do other things in their cars, thus willing to travel far. Changed value of time from 0.27 $/min in 2015 to 0.22 $/min in 2045 (source: Fehr & Peers), and cost of distance change from 0.14 $/mile to 0.12 $/mile in 2045 (source: Atlanta MPO)."
+Empty vehicle or zero-occupancy-vehicle trips and induced trip-making,Demand Side,"Increased mobility for the young, elderly, and others currently unable to drive. Partially induced/idling trips. In the trip generation step, trip purpose 3,4,5 (Home-Based Shopping, Home-Based Other, and None-Home-Based) production and attraction were multiplied by 1.25 (No change for Home-Based Work and Home-Based School trips). "
+Level of car sharing and ridesharing as a substitute for private vehicle use,Demand Side,No
+Overall household vehicle holdings,Demand Side,No 
+Changes to parking locations & behavior,Demand Side,No 
+Substitution of vehicles for built spaces,Demand Side,No 
+Temporal shifts in demand,Demand Side,No 
+Different speeds of CAVs,Supply Side,No
+"Provision of CAV infrastructure (smart signals, dedicated lanes, more/narrower lanes, etc.)",Supply Side,No
+Frequency and severity of incidents,Supply Side,No
+"TNC CAV fleet sizes, depot locations & other operational considerations",Supply Side,No

@@ -1,0 +1,10 @@
+﻿,Area Type 1,Area Type 2,Area Type 3,Area Type 4,Area Type 5
+Facility,Very High Density Commercial/Residential,High Density,Moderate Density,High/ Moderate Density,Very Low Density Commercial/Residential
+Centroid Connector," 9,999 "," 9,999 "," 9,999 "," 9,999 "," 9,999 "
+Local, 400 , 550 , 550 , 600 , 700 
+Collector, 500 , 600 , 650 , 700 , 850 
+Minor Arterial, 600 , 700 , 750 , 850 ," 1,050 "
+Major Arterial, 800 , 850 , 900 , 950 ," 1,150 "
+Freeway Ramp," 1,300 "," 1,300 "," 1,300 "," 1,400 "," 1,500 "
+Freeway to Freeway Ramp," 1,400 "," 1,400 "," 1,400 "," 1,500 "," 1,500 "
+Freeway," 1,900 "," 1,950 "," 2,000 "," 2,000 "," 2,050 "

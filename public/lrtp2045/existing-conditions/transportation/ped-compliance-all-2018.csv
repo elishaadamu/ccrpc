@@ -1,0 +1,7 @@
+Compliance Score,Sidewalk Miles,Curb Ramps,Crosswalks,Pedestrian Signals
+> 90 to 100,54.1,5736,1178,76
+> 80 to 90,144.2,3485,53,104
+> 70 to 80,112.1,2203,7,65
+> 60 to 70,189.6,1072,2,110
+60 or less,193.2,725,0,357
+Total,693.2,13221,1240,712

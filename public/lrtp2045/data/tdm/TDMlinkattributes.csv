@@ -1,0 +1,22 @@
+﻿Number,Attribute,Description
+1, A Node ,"Identifies the ""from"" node of the link"
+2, B Node ,"Identifies the ""to"" node of the link"
+3, Roadway ,Roadway Name
+4, ROW ,Roadway right-of-way (1 - one-way  or 2- two-way)
+5,Lane,Number of Lanes in direction of travel
+6,TWLTL,Two way left turn lane (0 - not present or 1 - present)
+7,Facility/FAC,Functional classification of the roadway (1-7)
+8,Zone,Adjacent zone number (used to calculate area type)
+9,Area,"Area Type 1=CBD, 2=Fringe, 3=Residential, 4=OBD, 5=Rural"
+14,SPD_CLS,Code used to calculate link speed
+15,CAP_CLS,Code used to calculate link capacity
+10,Speed_FF,Free flow link speed
+11,Capacity,24-hour roadway capacity
+12,Distance,Actual link distance between nodes
+13,SPD_CRV,Code used to calculate volume delay functions
+16,AADT,Observed annual average daily traffic
+17,Time,Congested travel time on the link
+18,Cong_Speed,Congested link speed
+19,Vol_Dir,Direction daily traffic volume on the link
+20,Vol_Total,Total daily volume (bi-direction) on the roadway segment
+21,VMT_Total,Vehicle miles traveled for the roadway segment

@@ -1,0 +1,8 @@
+﻿Link Attributes ,Description
+Headway ,Time difference between buses
+Travel Mode ,Transit (1)
+One Way ,Indicator One way link indicator (1)
+Operator Name ,CUMTD (1)
+Runtime ,Time for the bus to travel the route
+Speed ,Speed of the transit vehicle
+Vehicle Type ,Type of vehicle based on seat capacity

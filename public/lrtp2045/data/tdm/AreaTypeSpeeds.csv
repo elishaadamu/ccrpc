@@ -1,0 +1,10 @@
+﻿,Area Type 1,Area Type 2,Area Type 3,Area Type 4,Area Type 5
+Facility,Very High Density Commercial/Residential,High Density,Moderate Density,High/ Moderate Density,Very Low Density Commercial/Residential
+Centroid Connector,15,15,20,20,25
+Local,15,20,25,25,40
+Collector,20,25,30,30,45
+Minor Arterial,25,30,35,35,45
+Major Arterial,30,35,40,45,50
+Freeway Ramp,25,25,25,30,35
+Freeway to Freeway Ramp,30,30,30,35,35
+Freeway,55,60,65,65,70
