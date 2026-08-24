@@ -42,11 +42,10 @@ and resulted in **over 1,200 transportation system comments** and **over 1,100
 surveys** submitted about current transportation behavior and future
 transportation priorities.
 
-<rpc-table
-url=“input\_allevents.csv”
-table-title=“Public Outreach Events by Municipality - Phases One and Two”
-columns=“1,2”
-rows=“1,2,3,4,5,6,7”
+<rpc-chart url="demo_age.csv" type="bar" chart-title="Participant Age Distribution" description="Survey respondents compared to MPA population percentages."></rpc-chart>
+<rpc-chart url="demo_gender.csv" type="bar" chart-title="Participant Gender Distribution" description="Survey respondents compared to MPA population percentages."></rpc-chart>
+<rpc-chart url="demo_raceeth2.csv" type="bar" chart-title="Participant Race and Ethnicity" description="Survey respondents compared to MPA population percentages."></rpc-chart>
+
 
 ## Social Media Strategy
 

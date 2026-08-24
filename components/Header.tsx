@@ -3,305 +3,133 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import { ChevronDown, X, Menu, Plus, Minus } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export default function Header() {
-  const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  const toggleMenu = (menuName: string) => {
-    setActiveMenu(activeMenu === menuName ? null : menuName);
-  };
-
-  const isPathActive = (prefix: string) => {
-    if (!pathname) return false;
-    if (prefix === 'overview' && pathname.startsWith('/overview')) return true;
-    if (prefix === 'conditions' && pathname.startsWith('/existing-conditions')) return true;
-    if (prefix === 'goals' && pathname.startsWith('/goals')) return true;
-    if (prefix === 'vision' && pathname.startsWith('/vision')) return true;
-    if (prefix === 'process' && pathname.startsWith('/process')) return true;
-    if (prefix === 'appendices' && pathname.startsWith('/data')) return true;
-    return false;
-  };
-
-  // Close menus when clicking outside
+  // Close mobile menu when pathname changes
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (!(event.target as HTMLElement).closest('.custom-nav')) {
-        setActiveMenu(null);
-      }
-    };
-    document.addEventListener('click', handleClickOutside);
-    return () => document.removeEventListener('click', handleClickOutside);
-  }, []);
+    setMobileMenuOpen(false);
+  }, [pathname]);
 
-
+  const isPathActive = (path: string) => {
+    if (!pathname) return false;
+    return pathname === path || pathname.startsWith(path + '/');
+  };
 
   return (
-    <header className="custom-header custom-header--extended" role="banner">
-      <div className="custom-navbar">
-        <div className="custom-logo" id="extended-logo">
-          <em className="custom-logo__text">
-            <Link href="/" title="Home" aria-label="Home">
-              Long Range Transportation Plan 2045
-            </Link>
-          </em>
-        </div>
+    <header className="site-navbar-header" role="banner">
+      <div className="site-navbar-container">
+        {/* Brand Logo & Title */}
+        <Link href="/" className="site-navbar-brand" aria-label="LRTP 2045 Home">
+          <img 
+            src="/lrtp2045/img/cuuats-logo.svg" 
+            alt="CUUATS Logo" 
+            className="site-navbar-logo"
+          />
+          <div className="site-navbar-titles">
+            <span className="site-navbar-title-main">Long Range Transportation Plan 2045</span>
+            <span className="site-navbar-title-sub">Champaign-Urbana Urbanized Area (CUUATS)</span>
+          </div>
+        </Link>
 
-        <div className="custom-nav__secondary desktop-only">
-          <ul className="custom-nav__secondary-links">
-            <li className="custom-nav__secondary-item">
-              <a href="https://ccrpc.org/divisions/planning_and_development/transportation/index.php">CUUATS Home Page</a>
+        {/* Desktop Navigation Links */}
+        <nav className="site-navbar-desktop-nav" aria-label="Main Navigation">
+          <ul className="site-navbar-nav-list">
+            <li>
+              <Link 
+                href="/process/public-involvement"
+                className={`site-navbar-nav-link ${isPathActive('/process') ? 'is-active' : ''}`}
+              >
+                Public Involvement
+              </Link>
             </li>
-            <li className="custom-nav__secondary-item">
-              <Link href="/contact" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>
-                Contact
+            <li>
+              <Link 
+                href="/data/tpm"
+                className={`site-navbar-nav-link ${isPathActive('/data') ? 'is-active' : ''}`}
+              >
+                System Performance Report
               </Link>
             </li>
           </ul>
-        </div>
+        </nav>
 
+        {/* Mobile Hamburger Button */}
         <button
           type="button"
-          className="custom-menu-btn"
-          onClick={(e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            setMobileMenuOpen(true);
-          }}
+          className="site-navbar-mobile-toggle"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-expanded={mobileMenuOpen}
+          aria-label="Toggle navigation menu"
         >
-          Menu
+          {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
       </div>
 
-      <nav role="navigation" className={`custom-nav ${mobileMenuOpen ? 'is-visible' : ''}`}>
-        <div className="custom-nav__inner">
+      {/* Mobile Drawer */}
+      <div className={`site-navbar-mobile-drawer ${mobileMenuOpen ? 'is-open' : ''}`}>
+        <div className="site-navbar-mobile-header">
+          <div className="site-navbar-mobile-brand">
+            <img 
+              src="/lrtp2045/img/cuuats-logo.svg" 
+              alt="CUUATS Logo" 
+              className="site-navbar-mobile-logo"
+            />
+            <span className="site-navbar-mobile-title">LRTP 2045</span>
+          </div>
           <button
             type="button"
-            className="custom-nav__close"
-            onClick={(e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              setMobileMenuOpen(false);
-            }}
+            className="site-navbar-mobile-close"
+            onClick={() => setMobileMenuOpen(false)}
             aria-label="Close menu"
           >
-            <X size={24} strokeWidth={4} className="text-gray-700" />
+            <X size={24} />
           </button>
-          
-          <ul className="custom-nav__primary custom-accordion">
-            <li className="custom-nav__primary-item">
-              <button 
-                className={`custom-nav__button custom-nav__link ${isPathActive('overview') ? 'custom-current' : ''}`}
-                aria-expanded={activeMenu === 'overview'}
-                aria-controls="extended-nav-section-0"
-                onClick={() => toggleMenu('overview')}
-              >
-                <span>Overview</span>
-                <span className="custom-nav__mobile-icon">
-                  {activeMenu === 'overview' ? <Minus size={18} strokeWidth={3} /> : <Plus size={18} strokeWidth={3} />}
-                </span>
-                <ChevronDown size={16} className="custom-nav__desktop-icon margin-left-1" />
-              </button>
-              <div id="extended-nav-section-0" className={`custom-nav__submenu ${activeMenu === 'overview' ? 'is-visible' : 'display-none'}`} hidden={activeMenu !== 'overview'}>
-                <ul className="custom-nav__submenu-list">
-                  <li className="custom-nav__submenu-item">
-                    <Link href="/overview/introduction" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>Executive Summary</Link>
-                  </li>
-                  <li className="custom-nav__submenu-item">
-                    <Link href="/overview/historical" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>History</Link>
-                  </li>
-                </ul>
-              </div>
-            </li>
+        </div>
 
-            <li className="custom-nav__primary-item">
-              <button 
-                className={`custom-nav__button custom-nav__link ${isPathActive('conditions') ? 'custom-current' : ''}`}
-                aria-expanded={activeMenu === 'conditions'}
-                aria-controls="extended-nav-section-1"
-                onClick={() => toggleMenu('conditions')}
+        <nav className="site-navbar-mobile-nav">
+          <ul className="site-navbar-mobile-list">
+            <li>
+              <Link 
+                href="/" 
+                className={`site-navbar-mobile-link ${pathname === '/' ? 'is-active' : ''}`}
+                onClick={() => setMobileMenuOpen(false)}
               >
-                <span>Existing Conditions</span>
-                <span className="custom-nav__mobile-icon">
-                  {activeMenu === 'conditions' ? <Minus size={18} strokeWidth={3} /> : <Plus size={18} strokeWidth={3} />}
-                </span>
-                <ChevronDown size={16} className="custom-nav__desktop-icon margin-left-1" />
-              </button>
-              <div id="extended-nav-section-1" className={`custom-nav__submenu ${activeMenu === 'conditions' ? 'is-visible' : 'display-none'}`} hidden={activeMenu !== 'conditions'}>
-                <ul className="custom-nav__submenu-list">
-                  <li className="custom-nav__submenu-item">
-                    <Link href="/existing-conditions/demographics" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>Demographics</Link>
-                  </li>
-                  <li className="custom-nav__submenu-item">
-                    <Link href="/existing-conditions/land" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>Land Use</Link>
-                  </li>
-                  <li className="custom-nav__submenu-item">
-                    <Link href="/existing-conditions/environment" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>Environment</Link>
-                  </li>
-                  <li className="custom-nav__submenu-item">
-                    <Link href="/existing-conditions/health" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>Health</Link>
-                  </li>
-                  <li className="custom-nav__submenu-item">
-                    <Link href="/existing-conditions/transportation" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>Transportation</Link>
-                  </li>
-                </ul>
-              </div>
+                Home
+              </Link>
             </li>
-
-            <li className="custom-nav__primary-item">
-              <button 
-                className={`custom-nav__button custom-nav__link ${isPathActive('goals') ? 'custom-current' : ''}`}
-                aria-expanded={activeMenu === 'goals'}
-                aria-controls="extended-nav-section-2"
-                onClick={() => toggleMenu('goals')}
+            <li>
+              <Link 
+                href="/process/public-involvement"
+                className={`site-navbar-mobile-link ${isPathActive('/process') ? 'is-active' : ''}`}
+                onClick={() => setMobileMenuOpen(false)}
               >
-                <span>Goals</span>
-                <span className="custom-nav__mobile-icon">
-                  {activeMenu === 'goals' ? <Minus size={18} strokeWidth={3} /> : <Plus size={18} strokeWidth={3} />}
-                </span>
-                <ChevronDown size={16} className="custom-nav__desktop-icon margin-left-1" />
-              </button>
-              <div id="extended-nav-section-2" className={`custom-nav__submenu ${activeMenu === 'goals' ? 'is-visible' : 'display-none'}`} hidden={activeMenu !== 'goals'}>
-                <ul className="custom-nav__submenu-list">
-                  <li className="custom-nav__submenu-item">
-                    <Link href="/goals/overview" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>Measuring Progress</Link>
-                  </li>
-                  <li className="custom-nav__submenu-item">
-                    <Link href="/goals/safety" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>Safety</Link>
-                  </li>
-                  <li className="custom-nav__submenu-item">
-                    <Link href="/goals/multicon" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>Multimodal Connectivity</Link>
-                  </li>
-                  <li className="custom-nav__submenu-item">
-                    <Link href="/goals/equity" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>Equity</Link>
-                  </li>
-                  <li className="custom-nav__submenu-item">
-                    <Link href="/goals/economy" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>Economy</Link>
-                  </li>
-                  <li className="custom-nav__submenu-item">
-                    <Link href="/goals/environment" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>Environment</Link>
-                  </li>
-                </ul>
-              </div>
+                Public Involvement
+              </Link>
             </li>
-
-            <li className="custom-nav__primary-item">
-              <button 
-                className={`custom-nav__button custom-nav__link ${isPathActive('vision') ? 'custom-current' : ''}`}
-                aria-expanded={activeMenu === 'vision'}
-                aria-controls="extended-nav-section-3"
-                onClick={() => toggleMenu('vision')}
+            <li>
+              <Link 
+                href="/data/tpm"
+                className={`site-navbar-mobile-link ${isPathActive('/data') ? 'is-active' : ''}`}
+                onClick={() => setMobileMenuOpen(false)}
               >
-                <span>2045 Vision</span>
-                <span className="custom-nav__mobile-icon">
-                  {activeMenu === 'vision' ? <Minus size={18} strokeWidth={3} /> : <Plus size={18} strokeWidth={3} />}
-                </span>
-                <ChevronDown size={16} className="custom-nav__desktop-icon margin-left-1" />
-              </button>
-              <div id="extended-nav-section-3" className={`custom-nav__submenu ${activeMenu === 'vision' ? 'is-visible' : 'display-none'}`} hidden={activeMenu !== 'vision'}>
-                <ul className="custom-nav__submenu-list">
-                  <li className="custom-nav__submenu-item">
-                    <Link href="/vision/futureprojects" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>Future Projects</Link>
-                  </li>
-                  <li className="custom-nav__submenu-item">
-                    <Link href="/vision/model" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>Modeling</Link>
-                  </li>
-                  <li className="custom-nav__submenu-item">
-                    <Link href="/vision/funding" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>Funding</Link>
-                  </li>
-                  <li className="custom-nav__submenu-item">
-                    <Link href="/vision/implementation" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>Implementation</Link>
-                  </li>
-                </ul>
-              </div>
-            </li>
-
-            <li className="custom-nav__primary-item">
-              <button 
-                className={`custom-nav__button custom-nav__link ${isPathActive('process') ? 'custom-current' : ''}`}
-                aria-expanded={activeMenu === 'process'}
-                aria-controls="extended-nav-section-4"
-                onClick={() => toggleMenu('process')}
-              >
-                <span>Public Involvement</span>
-                <span className="custom-nav__mobile-icon">
-                  {activeMenu === 'process' ? <Minus size={18} strokeWidth={3} /> : <Plus size={18} strokeWidth={3} />}
-                </span>
-                <ChevronDown size={16} className="custom-nav__desktop-icon margin-left-1" />
-              </button>
-              <div id="extended-nav-section-4" className={`custom-nav__submenu ${activeMenu === 'process' ? 'is-visible' : 'display-none'}`} hidden={activeMenu !== 'process'}>
-                <ul className="custom-nav__submenu-list">
-                  <li className="custom-nav__submenu-item">
-                    <Link href="/process/public-involvement" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>Overview</Link>
-                  </li>
-                  <li className="custom-nav__submenu-item">
-                    <Link href="/process/round-one" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>Phase One Public Outreach</Link>
-                  </li>
-                  <li className="custom-nav__submenu-item">
-                    <Link href="/process/round-2" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>Phase Two Public Outreach</Link>
-                  </li>
-                  <li className="custom-nav__submenu-item">
-                    <Link href="/process/round-three" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>Phase Three Public Outreach</Link>
-                  </li>
-                </ul>
-              </div>
-            </li>
-
-            <li className="custom-nav__primary-item">
-              <button 
-                className={`custom-nav__button custom-nav__link ${isPathActive('appendices') ? 'custom-current' : ''}`}
-                aria-expanded={activeMenu === 'appendices'}
-                aria-controls="extended-nav-section-5"
-                onClick={() => toggleMenu('appendices')}
-              >
-                <span>Appendices</span>
-                <span className="custom-nav__mobile-icon">
-                  {activeMenu === 'appendices' ? <Minus size={18} strokeWidth={3} /> : <Plus size={18} strokeWidth={3} />}
-                </span>
-                <ChevronDown size={16} className="custom-nav__desktop-icon margin-left-1" />
-              </button>
-              <div id="extended-nav-section-5" className={`custom-nav__submenu ${activeMenu === 'appendices' ? 'is-visible' : 'display-none'}`} hidden={activeMenu !== 'appendices'}>
-                <ul className="custom-nav__submenu-list">
-                  <li className="custom-nav__submenu-item">
-                    <Link href="/data/tpm" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>System Performance Report</Link>
-                  </li>
-                  <li className="custom-nav__submenu-item">
-                    <Link href="/data/models" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>Data and Models</Link>
-                  </li>
-                  <li className="custom-nav__submenu-item">
-                    <Link href="/data/tdm" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>TDM Documentation</Link>
-                  </li>
-                </ul>
-              </div>
+                System Performance Report
+              </Link>
             </li>
           </ul>
+        </nav>
+      </div>
 
-          <div className="custom-nav__secondary mobile-only">
-            <ul className="custom-nav__secondary-links">
-              <li className="custom-nav__secondary-item">
-                <a href="https://ccrpc.org/divisions/planning_and_development/transportation/index.php">CUUATS Home Page</a>
-              </li>
-              <li className="custom-nav__secondary-item">
-                <Link href="/contact" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
+      {/* Mobile Backdrop Overlay */}
       {mobileMenuOpen && (
-        <div
-          className="custom-overlay is-visible"
-          onClick={(e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            setMobileMenuOpen(false);
-          }}
-        ></div>
+        <div 
+          className="site-navbar-mobile-backdrop" 
+          onClick={() => setMobileMenuOpen(false)}
+          aria-hidden="true"
+        />
       )}
     </header>
   );
