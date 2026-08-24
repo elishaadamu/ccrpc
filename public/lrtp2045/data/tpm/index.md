@@ -6,401 +6,182 @@ An evaluation of system performance with respect to Federal performance targets.
 
 ## Introduction
 
-The [Moving Ahead for Progress in the 21st Century](https://www.fhwa.dot.gov/map21/legislation.cfm) (MAP-21) enacted in 2012, and the
-subsequent [Fixing America’s Surface Transportation Act](https://www.fhwa.dot.gov/fastact/legislation.cfm) (FAST
-Act), enacted in 2015,
-established a national performance measurement system for the highway and
-transit programs. The U.S. Department of Transportation (USDOT) instituted this
-performance management requirement by establishing performance measures for four
-categories through rulemakings:
+Federal transportation legislation has included performance-based planning and programming as a key focus of statewide, metropolitan and transit decision-making. Under MAP-21, the Moving Ahead for Progress in the 21st Century Act, passed by Congress in 2012, a national performance framework was established linking transportation investment and performance to national, state, and local goals. The Fixing America's Surface Transportation (FAST) Act of 2015 and Infrastructure Investment and Jobs Act (IIJA) reaffirmed the federal commitment to use performance data to guide transportation policy, project selection, and investment priorities.
 
-* [Highway Safety](https://www.federalregister.gov/documents/2016/03/15/2016-05202/national-performance-management-measures-highway-safety-improvement-program)
-* [Pavement and Bridge Condition](https://www.federalregister.gov/documents/2017/01/18/2017-00550/national-performance-management-measures-assessing-pavement-condition-for-the-national-highway)
-* [System Performance](https://www.federalregister.gov/documents/2017/01/18/2017-00681/national-performance-management-measures-assessing-performance-of-the-national-highway-system)
-* [Transit Asset Conditions](https://www.govinfo.gov/content/pkg/FR-2016-07-26/pdf/2016-16883.pdf)
+State DOTs, MPOs, and public transportation operators set performance targets for, and report on progress made to achieve, national transportation performance goals. The FHWA and FTA regulations identify which measures, calculations, reporting frequency, and coordination processes apply to the FHWA and FTA transportation performance measures including highway safety, pavement and bridge condition, system reliability and freight movement, traffic congestion, air quality where applicable, transit asset management, and transit safety.
 
-The state departments of transportation (state DOTs) and metropolitan planning
-organizations (MPOs) are required to establish targets for each highway
-performance measure while transit agencies and MPOs set targets for transit
-asset condition. MPOs have 180 days after DOTs adopt statewide targets to choose
-either to set quantitative targets for their metropolitan planning areas or
-commit to the state’s targets. For the highway measures, at the conclusion of
-each performance period, the USDOT assesses whether “significant progress” has
-been made toward achieving the highway targets, which is defined differently
-depending on the measure. If states do not make significant progress, they are
-required to submit documentation to FHWA on how they will reach the targets; in
-certain cases, states are also required to program more federal funds toward
-improving conditions. No penalties are assessed on MPOs or transit agencies.
+Performance management is intended to make transportation planning more transparent, data-driven, and outcome-oriented. Rather than evaluate capital projects separately, transportation agencies use performance measures and performance targets to assess how scenarios of transportation investments would improve progress toward achieving performance outcomes related to safety, asset preservation, mobility, reliability, environmental stewardship and transportation system management. The result is a closer connection between a region's long-range transportation plan, the Metropolitan Transportation Improvement Program (MTIP), and the investments that ultimately get programmed for implementation.
 
-Once the targets are established, MPOs are directed to show how the investments
-in the Transportation Improvement Program (TIP) help achieve the targets.
-Furthermore, each performance measure’s baseline and targets must be included in
-a System Performance Report in the MPO’s Long Range Transportation Plan to
-document the condition and performance of the transportation system with respect
-to required performance measures.
-
-This System Performance Report starts with an
-overview of the process the MPO has taken to establish performance measure
-targets. For each of the federal performance management categories, this report
-reviews state and MPO baselines and targets and progress made by the MPO toward
-achieving the targets. It also includes discussions on how the LRTP 2045
-[preferred scenario](https://ccrpc.gitlab.io/lrtp2045/vision/model/) would
-improve the conditions and performance of the transportation system. This report
-ends with an overview of the linkage between the system performance measures and
-infrastructure investment decisions within the Champaign-Urbana Metropolitan
-Planning Area (MPA).
-
-## Process
-
-As part of complying with the national performance measurement system
-established by MAP 21, Illinois Department of Transportation (IDOT), the
-Champaign-Urbana MPO ([CUUATS](https://ccrpc.org/divisions/planning_and_development/transportation/index.php)), and the local
-transit agency, Champaign-Urbana Mass Transit District (MTD), have established a
-process for data sharing, target setting, and reporting. An Intergovernmental
-Agreement for Transportation Performance Management was created to comply with
-23 CFR 450.314(h) and executed by [CUUATS Policy
-Committee](https://ccrpc.org/divisions/planning_and_development/cuuats_policy_committee/index.php) in April
-2018. This Agreement defines rights and obligations for each agency in terms of
-cooperatively developing and sharing information related to transportation
-performance management data and transit asset management data, performance
-target setting, reporting of performance targets, and tracking progress toward
-attainment of critical outcomes for the MPO region.
-
-For the Champaign-Urbana MPA, targets for the three sets of National Performance
-Management Measures and the Transit Asset Management Performance Measures were
-adopted by CUUATS Policy Committee upon discussions at a series of CUUATS
-Technical and Policy Committee meetings, as noted below by meeting date and
-topic.
-
-* September 6, 2017: CUUATS Technical Committee Meeting, Presentation of CUUATS Safety Performance Targets
-* September 13, 2017: CUUATS Policy Committee Meeting, Presentation of CUUATS Safety Performance Targets
-* December 6, 2017: CUUATS Technical Committee Meeting, Approval of CUUATS Safety Performance Targets
-* December 13, 201: CUUATS Policy Committee Meeting, Approval of CUUATS Safety Performance Targets
-* December 13, 2017: Approval of C-U MTD Transit Asset Management Performance Measures
-* June 13, 2018: CUUATS Technical Committee Meeting, Presentation of Pavement and Bridge (PM2) and System Performance (PM3) Performance Targets
-* June 20, 2018: CUUATS Policy Committee Meeting, Presentation of Pavement and Bridge (PM2) and System Performance (PM3) Performance Targets
-* September 5, 2018: CUUATS Technical Committee Meeting, Approval of Pavement and Bridge (PM2) and System Performance (PM3) Performance Targets
-* September 12, 2018: CUUATS Policy Committee Meeting, Approval of Pavement and Bridge (PM2) and System Performance (PM3) Performance Targets
-* December 4, 2019: CUUATS Technical Committee Meeting, regarding dates for ongoing performance review
-* December 11, 2019: CUUATS Policy Committee Meeting, regarding dates for ongoing performance review
+Consistent with federal planning requirements, this System Performance Report documents the performance measures and targets applicable to TCAMPO and evaluates available baseline and trend data to assess progress toward those targets. Federal regulations require metropolitan transportation plans to include both a description of the performance measures and targets used to assess the transportation system and a System Performance Report that evaluates current conditions, past performance, and progress relative to established targets.
 
 ## Highway Safety (PM1)
 
-The safety performance measures require state DOTs and MPOs to establish safety targets as five-year rolling averages on all public roads for:
+Effective April 14, 2016, the FHWA established five highway safety performance measures to carry out the Highway Safety Improvement Program (HSIP). These annual performance measures are:
 
-1. The number of fatalities
-2. The rate of fatalities per 100 million vehicle miles traveled (VMT)
-3. The number of serious injuries
-4. The rate of serious injuries per 100 million VMT
-5. The number of non-motorized fatalities and non-motorized serious injuries
+1. Number of fatalities;
+2. Rate of fatalities per 100 million vehicle miles traveled (VMT);
+3. Number of serious injuries;
+4. Rate of serious injuries per 100 million VMT; and
+5. Number of non-motorized fatalities and non-motorized serious injuries.
 
 ### State Targets
 
-Injuries and fatalities from traffic crashes vary considerably from year to year
-due to numerous factors, and the five-year average is meant to smooth large
-changes. IDOT must adopt targets for each safety measure by August 31 on an
-annual basis. MPOs must establish targets within 180 days after IDOT. MPOs can
-either choose to adopt the state’s targets (Table 1) or set their own
-quantitative targets.
+Traffic injuries and fatalities fluctuate from year to year, so five-year averages are used to smooth annual variations. VDOT establishes annual safety targets by August 31, and MPOs must establish targets within 180 days. MPOs may either adopt the State’s targets or establish their own quantitative targets.
+
+<rpc-table url="pm1_illinois.csv" title="Table 1: State Safety Targets" description="Annual targets for highway safety performance measures."></rpc-table>
 
 ### MPO Targets and Performance
 
-[CUUATS Policy Committee](https://ccrpc.org/divisions/planning_and_development/cuuats_policy_committee/index.php) approved
-the PM1 targets for 2018 through 2020 based on goals established in the LRTP
-2040: Sustainable Choices, approved in December 2014, rather than adopting the
-state’s targets. The MPO targets do not differ significantly from the state’s
-targets but are slightly more ambitious than the state’s targets and are
-consistent with the LRTP.
+The TCAMPO’s Policy Committee established PM1 safety targets based on the goals of PLAN2045 rather than adopting the State’s targets. The MPO targets were slightly more ambitious than the State’s targets while remaining consistent with the PLAN2045. Table 2 presents the PM1 baseline, 2018–2020 targets, and 2018 performance assessment.
 
-Table 2 presents the PM1 baseline, 2018-2020 targets, and 2018 performance
-assessment for the Champaign-Urbana MPA.
+<rpc-table url="pm1_cu.csv" title="Table 2: MPO Safety Targets & Performance Assessment" description="Champaign-Urbana MPA safety performance baseline, targets, and actual performance."></rpc-table>
 
-Champaign-Urbana MPA 2014-2018 five-year rolling average crash data shows one
-performance measure, number of non-motorized fatalities and non-motorized
-serious injuries, met the 2018 target. Out of the four performance measures that
-performed worse than the targets set for 2018, three performance measures
-maintained or improved from the 2015 baseline (Figure 1-5).
+<!--
+<rpc-chart url="figure1_fatalmpa.csv" type="line" chart-title="Figure 1: Fatalities in the MPA" description="Actual number of fatalities compared to PM1 targets." y-label="Number of Fatalities"></rpc-chart>
+<rpc-chart url="pm2_fatalvmt_cu.csv" type="line" chart-title="Figure 2: Fatality Rate per 100 Million VMT" description="Actual fatality rate per 100 million VMT compared to PM1 targets." y-label="Rate per 100M VMT"></rpc-chart>
+<rpc-chart url="pm1_injury_cu.csv" type="line" chart-title="Figure 3: Serious Injuries in the MPA" description="Actual number of serious injuries compared to PM1 targets." y-label="Number of Serious Injuries"></rpc-chart>
+<rpc-chart url="pm1_injuryvmt_cu.csv" type="line" chart-title="Figure 4: Serious Injury Rate per 100 Million VMT" description="Actual serious injury rate per 100 million VMT compared to PM1 targets." y-label="Rate per 100M VMT"></rpc-chart>
+<rpc-chart url="pm1_nonmotorinjury_cu.csv" type="line" chart-title="Figure 5: Non-Motorized Fatalities and Serious Injuries" description="Actual non-motorized fatalities and serious injuries compared to PM1 targets." y-label="Count"></rpc-chart>
+-->
 
 ### Moving Towards the Targets
 
-Since the approval of the LRTP 2040 in December 2014,
-[CUUATS](https://ccrpc.org/divisions/planning_and_development/transportation/index.php), working with the member
-agencies, has taken a series of actions to implement various safety
-recommendations to meet the plan’s goals. Below is a list of major studies,
-plans, and grant applications
-[CUUATS](https://ccrpc.org/divisions/planning_and_development/transportation/index.php) carried out to move the
-Champaign-Urbana MPA toward the LRTP 2040 goals as well as the PM1 safety
-targets. Note this is not a comprehensive list. See [CUUATS
-UTWPs](https://ccrpc.org/transportation/unified_planning_work_program_(upwp).php) for
-additional information.
+Since the adoption of LRTP 2040, CUUATS and its member agencies have implemented various safety studies, plans, and grant applications to advance LRTP goals and PM1 safety targets. The following summarizes major efforts; it is not a comprehensive list. Additional activities are documented in the CUUATS UPWP.
 
-1. Assessed seven Safety and Security Performance Measures through annual LRTP 2040 [report card update](https://data.ccrpc.org/pages/lrtp-2040-annual-report-card) (2015-2019) .
-2. Produced the “Traffic Crash Facts for Champaign-Urbana and Selected Crash Intersection Locations (SCIL)” report for 2009-2013 (2015).
-3. Prepared and submitted an HSIP grant application for safety improvements on the Cardinal Road/Rising Road intersection on behalf of Champaign County (2015). Requested HSIP funding was granted and improvements at the intersection were implemented.
-4. Prepared Complete Streets policies for the Villages of Savoy and Mahomet (2015).
-5. Prepared and submitted a Bicycle Friendly Business (BFB) application for CCRPC to the League of American Bicyclists (LAB). CCRPC was designated a Silver Level Bicycle Friendly Business (BFB) by the League of American Bicyclists (LAB) (2015).
-6. Reviewed and provided comments on the SRTS non-infrastructure grant application for the C-U SRTS Project (2015).
-7. Updated SRTS Maps for public elementary and middle schools in Champaign-Urbana (2015-2019).
-8. Prepared a Safe Routes To School Plan for Prairie School in Urbana (2016).
-9. Prepared a Safe Routes To School Plan for South Side School in Champaign (2016).
-10. Identified 30 bikeway gaps in Champaign, Urbana, Savoy, and Mahomet and sent this information to IDOT in written and GIS form (2016).
-11. Prepared Transit Facility Guidelines for the Champaign-Urbana Urbanized Area (2016).
-12. Completed the Champaign-Urbana Urbanized Area Sidewalk Inventory and Assessment which provides a database on sidewalk and curb ramp condition and ADA compliance for CUUATS member agencies (2016-2019). CUUATS staff update the database each year.
-13. Reviewed, scored and provided comments on all 2016 ITEP applications submitted for funding within the Champaign-Urbana Metropolitan Planning Area (2016).
-14. Prepared an HSIP application for installing stop signs at several intersections in rural Champaign County (2017). Requested HSIP funding was granted and stop signs were installed at several rural intersections in Champaign County.
-15. Developed a bicycle tracking smartphone application and analysis of bicycle route data (2017-2019).
-16. Carried out the Curtis Road Corridor Study (2016-2017), which includes safety analysis and recommendations for safety improvements.
-17. Developed Savoy Bike & Pedestrian Plan (2017).
-18. Developed the Champaign-Urbana Pedestrian Crossing Enhancement Guidelines (2017).
-19. Carried out the Champaign County Five Percent Segments and Intersections Study (2018).
-20. Prepared a Highway Safety Improvement Program (HSIP) Grant Application for Sidney Road (2018). Requested HSIP funding was granted and design engineering is being completed.
-21. Assessed the implementation of the five Safe Routes to School (SRTS) plans that CCRPC has written (2015-2019).
-22. Carried out Before and After Safety Analysis for Selected Intersections Study (2018).
-23. Developed Champaign County Rural Safety Plan (2018-2019).
-24. Developed Champaign-Urbana Urbanized Area Safety Plan (2018-2019).
-25. Developed Urbana Pedestrian Master Plan (2018-2019).
-26. Developed Urbana Bicycle Wayfinding Plan (2018-2019).
-27. Carried out Bradley Avenue Safety Study (2018). Recommendations from the study are being implemented.
-28. Conducted crash analysis for Lincoln Avenue from Nevada Street to Pennsylvania Avenue (2019).
+To support progress towards approved highway safety targets, the FY 2021-2024 TIP includes several key safety investments. A total of $8,580,368.00 has been programmed in the FY 2021-2024 TIP to improve highway safety: averaging approximately $2,145,092.00 per year.
 
-In the current LRTP 2045, a more detailed list of five-year objectives,
-additional localized safety performance measures, as well as specific strategies
-with responsible parties identified, have been proposed under the Safety Goal to
-continue the efforts of moving the Champaign-Urbana MPA toward the [PM1
-targets](https://ccrpc.gitlab.io/lrtp2045/goals/safety/).
-
-The modeling section of the [LRTP
-2045](https://ccrpc.gitlab.io/lrtp2045/vision/model/) details how the 2045
-preferred scenario, in comparison with the 2045 Business-As-Usual scenario, is
-projected to result in less Vehicle Miles Traveled (VMT), decreased share of
-automobile travel, decreased new infrastructure cost, and increased pedestrian
-and bicycle access scores, all of which will likely lead to a positive impact on
-achieving the PM1 targets.
+LRTP 2045 identifies five-year safety objectives, localized safety measures, and specific strategies with responsible parties to support progress toward PM1 targets. The 2045 preferred scenario is projected to reduce VMT and automobile travel, lower new infrastructure costs, and improve pedestrian and bicycle access compared with the Business-as-Usual scenario. These outcomes are expected to support progress toward the PM1 safety targets.
 
 ## Pavement and Bridge Conditions (PM2)
 
-The infrastructure condition performance measures require state DOTs and MPOs to establish targets for:
+In January 2017, USDOT published the Pavement and Bridge Condition Performance Measures Final Rule. This rule establishes the following six performance measures:
 
-1. Percentage of pavements of the Interstate System in Good condition
-2. Percentage of pavements of the Interstate System in Poor condition
-3. Percentage of pavements of the non-Interstate National Highway System (NHS) in Good condition
-4. Percentage of pavements of the non-Interstate NHS in Poor condition
-5. Percentage of NHS bridges classified as in Good condition
-6. Percentage of NHS bridges classified as in Poor condition
+1. Percent of Interstate pavements in good condition;
+2. Percent of Interstate pavements in poor condition;
+3. Percent of non-Interstate National Highway System (NHS) pavements in good condition;
+4. Percent of non-Interstate NHS pavements in poor condition;
+5. Percent of NHS bridges by deck area classified as in good condition; and
+6. Percent of NHS bridges by deck area classified as in poor condition.
 
 ### State Targets
 
-IDOT established PM2 targets for 2020 and 2022 in May 2018 (Table 3). IDOT uses
-the Condition Rating Survey (CRS) method for rating pavement condition in
-Illinois, and assigns pavement condition ratings based on pavement distress,
-such as International Roughness Index (IRI), rutting, cracking, and
-deterioration. IDOT performs bi-yearly safety inspections and condition
-assessments of bridges. This is the designated frequency in National Bridge
-Inspection Standards (NBIS). Through these inspections, condition rating data is
-collected for the deck, super structure, and substructure and an overall rating
-of Good, Fair, or Poor condition is assigned to each bridge metric per calendar year.
+IDOT established PM2 targets for 2020 and 2022 in May 2018. Pavement conditions are assessed using the Condition Rating Survey (CRS), which considers IRI, rutting, cracking, and deterioration. Bridges are inspected biennially under NBIS, with condition ratings assigned to the deck, superstructure, and substructure as Good, Fair, or Poor.
+
+<rpc-table url="pm2_illinois.csv" title="Table 3: State Pavement and Bridge Condition Targets" description="State PM2 targets for 2020 and 2022."></rpc-table>
 
 ### MPO Targets and Performance
 
-The National Highway System (NHS) within the MPA is the focus of PM2. The NHS is
-a federal designation for roadways considered important to the nation’s economy.
-In the Champaign-Urbana MPA, this includes all the interstates and some
-non-interstate roadways, such as state routes and several local roadways. The
-NHS in the MPA has changed over time. Figure 6 shows MPA NHS roadway and bridge
-designations in 2018.
+PM2 focuses on the National Highway System (NHS) within the MPA. The NHS includes roadways of national economic importance, including interstates, state routes, and selected local roads. The NHS network and associated bridge designations may change over time. Figure 6 shows the NHS roadway and bridge designations for 2018.
 
 #### Figure 6: NHS and NHS bridges in the Champaign-Urbana MPA, 2018
 
 ![Map of the Champaign-Urbana MPA showing the bridges in the area and their jurisdiction. Most bridges are IDOTs responsibility with a few being Champaign and Urbana's responsibility.](NHS%20and%20NHS%20Bridges%20in%20the%20MPA,%202018.jpg)
 
+The CUUATS Policy Committee adopted the State’s PM2 targets after reviewing 2017 pavement and bridge conditions and projected 2020 conditions based on FY 2017–2020 TIP projects. CUUATS receives pavement and bridge condition data from IDOT. Table 4 presents the 2017 baseline, 2020 and 2022 targets, and 2018 performance assessment.
 
-Note: To expand the image to full-size, right-click the graphic and choose 'open image in new tab'.
+<rpc-table url="pm2_cu.csv" title="Table 4: MPA Pavement and Bridge Condition Targets & Performance Assessment" description="Champaign-Urbana MPA PM2 baseline, targets, and 2018 performance."></rpc-table>
 
-Image:
-
-CCRPC and Champaign County GIS Consortium
-
-The [CUUATS Policy Committee](https://ccrpc.org/divisions/planning_and_development/cuuats_policy_committee/index.php)
-adopted the state’s PM2 targets for the Champaign-Urbana MPA after an analysis
-of MPA’s 2017 pavement and bridge baseline condition data as well as 2020
-projected conditions estimated using FY 2017-2020 TIP projects.
-[CUUATS](https://ccrpc.org/divisions/planning_and_development/transportation/index.php)
-receives pavement and bridge condition data from IDOT.
-
-Table 4 presents the PM2 2017 baseline, 2020 and 2022 targets, and 2018
-performance assessment for the Champaign-Urbana MPA.
-
-Champaign-Urbana MPA PM2 2018 data shows two performance measures performed
-better than the 2017 baseline, and four performed worse than the 2017 baseline.
-Out of the four performance measures that performed worse than the 2017
-baseline, two performed worse than the 2020 target: percent of non-interstate
-NHS pavements in Poor condition and percent of NHS bridge classified as in Poor
-condition.
+The 2018 PM2 assessment showed that two performance measures improved from the 2017 baseline, while four declined. Of the four measures that declined, two also performed worse than the 2020 targets: non-interstate NHS pavement in Poor condition and NHS bridges in Poor condition.
 
 ### Moving Toward the Targets
 
-Figure 7 shows 2018 NHS roadway and bridge conditions in the Champaign-Urbana
-MPA and scheduled improvement projects approved in TIP FY 2020-2023, as of
-November 18, 2019.
+Figure 7 shows 2018 NHS roadway and bridge conditions in the Champaign-Urbana MPA, along with improvement projects programmed in the FY 2020–2023 TIP as of November 18, 2019.
 
 #### Figure 7: NHS Pavement and Bridge Conditions & Scheduled Improvements, 2018
 
 ![Map of the Champaign-Urbana MPA showing the bridges in the area and their safety ranking. Most bridges are ranked either good or fair. The worst bridges lie along interstate 74. Five local bridges are ranked poorly, but scheduled for improvement.](PM2%20NHS%20Pavement%20and%20Bridge%20Conditions%20&%20Scheduled%20Improvements,%202018.jpg)
 
+The LRTP 2045 preferred scenario is projected to reduce VMT and automobile travel, lower new infrastructure costs, and improve pedestrian and bicycle access compared with the Business-as-Usual scenario. These outcomes are expected to support progress toward the PM2 targets.
 
-Note: To expand the image to full-size, right-click the graphic and choose 'open image in new tab'.
-
-Image:
-
-CCRPC and Champaign County GIS Consortium
-
-The [modeling section](https://ccrpc.gitlab.io/lrtp2045/vision/model/) of the LRTP 2045
-details how the 2045 preferred scenario, in comparison with the 2045 Business-As-Usual
-scenario, is projected to result in less VMT, decreased share of automobile travel,
-decreased new infrastructure cost, and increased pedestrian and bicycle access score,
-all of which will likely lead to a positive impact on achieving the PM2 targets.
+To support progress toward the approved PM2 targets, the FY 2021–2024 TIP programmed $8,580,368 for highway safety improvements, averaging approximately $2.15 million annually.
 
 ## System Performance (PM3)
 
-The system performance measures require state DOTs and MPOs to establish targets
-for:
+In January 2017, USDOT published the System Performance/Freight/CMAQ Performance Measures Final Rule to establish measures to assess passenger and freight performance on the Interstate and non-Interstate National Highway System (NHS), and traffic congestion and on-road mobile source emissions in areas that do not meet federal National Ambient Air Quality Standards (NAAQS). The rule, which is referred to as the PM3 rule, requires MPOs to set targets for the following six performance measures:
 
-1. Percent of reliable person-miles traveled on the Interstate
-2. Percent of reliable person-miles traveled on the non-Interstate NHS
-3. Percentage of Interstate system mileage providing for reliable truck travel time - Truck Travel Time Reliability Index
+1. Percent of person-miles on the Interstate system that are reliable, also referred to as Level of Travel Time Reliability (LOTTR);
+2. Percent of person-miles on the non-Interstate NHS that are reliable (LOTTR);
+3. Truck Travel Time Reliability index (TTTR);
+4. Annual hours of peak hour excessive delay per capita;
+5. Percent of non-single occupant vehicle travel (Non-SOV); and
+6. Total emissions reduction of on-road mobile source emissions.
 
-For MPOs in non-attainment or maintenance status, there are three additional
-performance measures on traffic congestion assessment that are not applicable
-for the Champaign-Urbana MPA.
+Florida, only the two LOTTR performance measures and the TTTR performance measure apply. Because all areas in Florida meet current NAAQS, the remaining three measures do not currently apply in Florida.
 
 ### State Targets
 
-The PM3 measures require the use of the National Performance Management Research
-Data Set (NPMRDS). IDOT has procured The Regional Integrated Transportation
-Information System (RITIS) to analyze the NPMDRS and provided access to RITIS
-for the MPOs within the state to use. IDOT established PM3 targets for 2020 and
-2022 in May 2018 (Table 5).
+PM3 measures rely on the National Performance Management Research Data Set (NPMRDS) to assess system performance. IDOT provides MPOs access to RITIS to analyze NPMRDS data and established PM3 targets for 2020 and 2022 in May 2018.
+
+<rpc-table url="pm3_illinoisvmt.csv" title="Table 5: State System Performance Targets" description="State PM3 targets for 2020 and 2022."></rpc-table>
 
 ### MPO Targets
 
-[CUUATS](https://ccrpc.org/divisions/planning_and_development/transportation/index.php)
-adopted the state’s PM3 targets. Table 6 presents the PM3 2017 baseline, 2020 and 2022
-targets, and 2018 performance assessment using NPMRDS INRIX data for the Champaign-Urbana MPA.
+CUUATS adopted the State’s PM3 targets. Table 6 presents the 2017 baseline, 2020 and 2022 targets, and 2018 performance assessment for the Champaign-Urbana MPA based on NPMRDS INRIX data.
 
-Champaign-Urbana MPA PM3 2018 data show all PM3 performance measures maintained or improved from 2017 baseline.
+<rpc-table url="pm3_mpa.csv" title="Table 6: MPA System Performance Targets & Assessment" description="Champaign-Urbana MPA PM3 baseline, targets, and 2018 performance."></rpc-table>
 
 ### Moving Toward the Targets
 
-Since the approval of the LRTP 2040 December 2014,
-[CUUATS](https://ccrpc.org/divisions/planning_and_development/transportation/index.php),
-working with the member agencies, carried out the Champaign County Hazmat Commodity Flows
-Study and developed the Champaign-Urbana Region Freight Plan.
-[CUUATS](https://ccrpc.org/divisions/planning_and_development/transportation/index.php)
-also helped prepare INFRA grant applications on behalf of the Village of Savoy for the
-Curtis Road Grade Separation and Complete Streets Project in 2017 and 2019.
+Since the adoption of LRTP 2040, CUUATS and its member agencies have advanced freight and system performance through the Champaign County Hazmat Commodity Flows Study, the Champaign-Urbana Region Freight Plan, and INFRA grant applications for the Curtis Road Grade Separation and Complete Streets Project.
 
-The [modeling section](https://ccrpc.gitlab.io/lrtp2045/vision/model/) of the
-LRTP 2045 details how the 2045 preferred scenario, in comparison with the 2045
-Business-As-Usual scenario, is projected to result in less VMT, decreased share
-of automobile travel, decreased new infrastructure cost, and increased
-pedestrian and bicycle access score, all of which will likely lead to a positive
-impact on achieving the PM3 targets.
+The LRTP 2045 preferred scenario is projected to reduce VMT and automobile travel, lower new infrastructure costs, and improve pedestrian and bicycle access compared with the Business-as-Usual scenario. These outcomes are expected to support progress toward PM3 targets.
 
 ## Transit Asset Management (TAM)
 
-Transit Asset Management (TAM) is applicable to providers who are recipients or
-sub-recipients of Federal financial assistance under 49 U.S.C. Chapter 53. TAM
-is an effort to keep assets and equipment in transit systems in a state of good
-repair, so the systems contribute to the safety of the system as a whole. This
-supports the idea that a vehicle in good repair will minimize risk and maximize
-safety. TAM measures performance for the following asset categories:
+The Federal Transit Administration (FTA) established the Transit Asset Management (TAM) rule, which became effective October 1, 2016. The rule applies to public transportation agencies receiving federal financial assistance under 49 U.S.C. Chapter 53 and requires them to develop a TAM Plan to guide investment decisions for public transportation assets, including revenue vehicles, facilities, equipment, and infrastructure.
 
-1. Equipment
-2. Facilities
-3. Infrastructure
-4. Rolling Stock
+A TAM Plan includes four required elements:
 
-The TAM Final Rule requires recipients to set one or more performance targets
-per asset class based on State of Good Repair measures. The Final Rule also
-requires transit providers to coordinate with MPOs, to the maximum extent
-practicable, in the selection of MPO performance targets. The coordination
-amongst transit providers and MPOs should influence transportation funding
-investment decisions and is intended to increase the likelihood that transit
-state of good repair needs are programmed, committed to, and funded as part of
-the planning process.
+* Equipment
+* Facilities
+* Infrastructure
+* Rolling Stock
+
+The TAM Final Rule requires transit providers to establish performance targets for each applicable asset class based on State of Good Repair measures. Transit providers are also required to coordinate with MPOs, to the maximum extent practicable, when establishing these targets. This coordination helps align transportation investments with transit asset needs and supports the programming and funding of projects that maintain transit assets in a State of Good Repair.
 
 ### MTD Targets and performance
 
-The following tables show the C-U MTD’s TAM targets and performance by categories.
+The following tables present C-U MTD’s TAM targets and performance by asset category.
+
+<rpc-table url="tam_rollstock.csv" title="Table 7: TAM Performance Targets – Rolling Stock" description="C-U MTD Useful Life Benchmark (ULB) targets and performance for revenue vehicles."></rpc-table>
+
+<rpc-table url="tam_equipment.csv" title="Table 8: TAM Performance Targets – Equipment" description="C-U MTD Useful Life Benchmark (ULB) targets and performance for non-revenue equipment vehicles."></rpc-table>
+
+<rpc-table url="tam_facilities.csv" title="Table 9: TAM Performance Targets – Facilities" description="C-U MTD condition rating targets and performance for facilities on FTA TERM scale."></rpc-table>
 
 ### Moving Toward the targets
 
-C-U MTD has received an FTA Bus & Bus Facilities grant to upgrade and expand
-Illinois Terminal (Table 7, Passenger Facility) in FY21. In FY21 C-U MTD will
-renovate its Administration & Operations Facility and expand into offices
-formerly used as tenant space to accommodate its growing staff and
-organizational structure.
+C-U MTD received an FTA Bus & Bus Facilities grant to upgrade and expand Illinois Terminal in FY21. The agency also planned to renovate and expand its Administration & Operations Facility to accommodate staff growth.
 
-C-U MTD will replace five 40-foot and six 60-foot standard diesel buses that
-have exceeded ULB with diesel-electric hybrid buses in FY20. Additionally, C-U
-MTD will replace two standard diesel articulated buses with hydrogen fuel cell
-electric articulated buses in FY21. Other revenue vehicles that have exceeded
-ULB will be replaced in FY22 and beyond.
+C-U MTD also planned to replace aging buses that exceeded their useful life benchmark (ULB), including diesel buses with diesel-electric hybrid and hydrogen fuel cell electric buses, with additional vehicle replacements planned for FY22 and beyond.
+
+## Transit Safety
+
+The Federal Transit Administration (FTA) established transit safety performance management requirements through the Public Transportation Agency Safety Plan (PTASP) Final Rule, published on July 19, 2018. The rule requires applicable public transportation providers receiving federal financial assistance under 49 U.S.C. Chapter 53 to develop and implement a PTASP using a Safety Management Systems (SMS) approach.
+
+The PTASP must establish annual performance targets for the safety measures identified in the FTA's National Public Transportation Safety Plan. These measures include:
+
+* **Fatalities:** Total number and rate of reportable fatalities per total vehicle revenue miles, by mode.
+* **Injuries:** Total number and rate of reportable injuries per total vehicle revenue miles, by mode.
+* **Safety Events:** Total number and rate of reportable safety events per total vehicle revenue miles, by mode.
+* **System Reliability:** Mean distance between major mechanical failures, by mode.
+
+Transit providers subject to the PTASP requirements must establish and make their safety performance targets available to the applicable MPO. The MPO then establishes transit safety targets for its planning area within 180 days of receiving the provider's targets and incorporates those targets into its metropolitan transportation planning process and applicable LRTP.
+
+For the TCAMPO planning area, Petersburg Area Transit (PAT) is the applicable transit provider and is responsible for developing and maintaining its PTASP and establishing annual transit safety performance targets. TCAMPO uses these targets to support regional performance-based transportation planning and incorporates them into the Metropolitan Transportation Improvement Program (MTIP) and PLAN2050.
 
 ## Linking Performance with Investment
 
-### Transportation Improvement Program (TIP)
+### Transportation Improvement Program (TIP) and Project Prioritization
 
-[CUUATS](https://ccrpc.org/divisions/planning_and_development/transportation/index.php) recognizes the importance
-of linking investment priorities to stated performance objectives, and that
-establishing this link is critical to the achievement of national transportation
-goals and statewide and regional performance targets. As such, [FY 2020-2023
-TIP](https://ccrpc.org/transportation/transportation_improvement_plan_(tip)/introduction_and_background_fy_2020_fy_2023.php)
-documents the established targets associated with each of the performance
-measures as well as the local projects utilizing federal funding that address
-the targets.
+TCAMPO recognizes the importance of linking transportation investment priorities to established performance objectives and regional transportation goals. This connection helps ensure that federal transportation investments support national, statewide, and regional performance targets and contribute to the goals established in PLAN2050.
 
-Pending guidance from IDOT regarding how to document the connection between TIP
-projects and the performance measures, at this time,
-[CUUATS](https://ccrpc.org/divisions/planning_and_development/transportation/index.php) staff are not able to speak
-to the evaluation methods of projects that are led by state and/or federal
-agencies. In addition, due to the delayed release of the State’s multi-year
-program in October 2019, these tables are currently in the process of being
-updated to include which federally-funded local TIP projects address each
-performance target, linking investment priorities to those performance targets
-as required in 23 CFR 450.326.
+The MTIP documents federally funded transportation projects and identifies how investments support applicable performance measures and regional priorities. As projects are developed and programmed, TCAMPO considers their relationship to the MPO's performance targets, transportation goals, and identified system needs, consistent with the requirements of 23 CFR 450.326.
 
-### Project Priority Review (PPR)
+### Project Prioritization and Performance-Based Investment
 
-[CUUATS Policy Committee](https://ccrpc.org/divisions/planning_and_development/cuuats_policy_committee/index.php) approved
-the [Project Priority Review (PPR) Guidelines in 2016 (updated in
-2017)](https://ccrpc.org/transportation/project_priority_review_ppr_guidelines.php), which
-outlines the process by which
-[CUUATS](https://ccrpc.org/divisions/planning_and_development/transportation/index.php) evaluates and documents
-consistency between the local use of federal Surface Transportation Block Group
-(STBG) (formerly Surface Transportation - Urban [STPU]) funds and federal and
-regional transportation goals. Local agencies seeking to use STBG funds are
-required to submit a project application for review by
-[CUUATS](https://ccrpc.org/divisions/planning_and_development/transportation/index.php) staff and the Project
-Priority Review working group who use a set of criteria based on federal and
-regional transportation goals to score each project.
+TCAMPO uses a performance-based approach to prioritize transportation investments. Projects seeking federal funding are evaluated based on their consistency with adopted regional transportation goals, identified transportation needs, and applicable federal performance measures. The prioritization process provides a transparent framework for evaluating projects and allocating limited federal transportation resources toward investments that provide the greatest benefit to the region.
 
-In 2017, [CUUATS Policy Committee](https://ccrpc.org/divisions/planning_and_development/cuuats_policy_committee/index.php)
-approved allocating funding for one project in the MPA in fiscal year 2019. In
-2018, [CUUATS Policy Committee](https://ccrpc.org/divisions/planning_and_development/cuuats_policy_committee/index.php)
-approved allocating funding for three projects in the MPA in fiscal years 2022
-and 2023 based on PPR working group and
-[CUUATS](https://ccrpc.org/divisions/planning_and_development/transportation/index.php) staff recommendations. Upon
-approval of the LRTP 2045, the PPR Guidelines will be updated to reflect the
-federal performance measures as well as the LRTP 2045 goals.
+Project evaluation considers factors such as system preservation, safety, congestion and mobility, multimodal accessibility, economic development, environmental considerations, and consistency with PLAN2050. The resulting project priorities inform the development and amendment of the MTIP and help establish a clear connection between transportation investments and regional performance objectives.
 
-## Conclusion
-
-The emphasis on setting and achieving performance targets represents a major
-change in the federal transportation program ushered in by MAP-21 and the FAST
-Act. The required MPO targets are a chance for the region to continue connecting
-short-term performance measurement to longer-term regional priorities. The MPO
-target-setting requirements also give the region another avenue to call
-attention to the large investment and funding needs for different elements of
-the system. [CUUATS](https://ccrpc.org/divisions/planning_and_development/transportation/index.php) will continue
-tracking and updating these measures as needed.
+As TCAMPO updates its performance measures and transportation plans, the project prioritization process will continue to be refined to ensure that federal investments are directly linked to adopted performance targets and the goals and objectives of PLAN2050.

@@ -160,11 +160,36 @@ export default function MarkdownRenderer({ content, baseUrl }: MarkdownRendererP
   );
 }
 
+function getNodeText(node: any): string {
+  if (typeof node === 'string') return node;
+  if (typeof node === 'number') return String(node);
+  if (Array.isArray(node)) return node.map(getNodeText).join('');
+  if (node?.props?.children) return getNodeText(node.props.children);
+  return '';
+}
+
+function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '')
+    .trim()
+    .replace(/\s+/g, '-');
+}
+
 function markdownComponents(baseUrl: string, setLightboxImage: (src: string) => void) {
   return {
-    h1: ({node, ...props}: any) => <h1 {...props} id={props.children?.toString().toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-')} className="margin-top-6 margin-bottom-2" />,
-    h2: ({node, ...props}: any) => <h2 {...props} id={props.children?.toString().toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-')} className="margin-top-6 margin-bottom-2" />,
-    h3: ({node, ...props}: any) => <h3 {...props} id={props.children?.toString().toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-')} className="margin-top-5 margin-bottom-1" />,
+    h1: ({node, ...props}: any) => {
+      const id = slugify(getNodeText(props.children));
+      return <h1 {...props} id={id} className="margin-top-6 margin-bottom-2" />;
+    },
+    h2: ({node, ...props}: any) => {
+      const id = slugify(getNodeText(props.children));
+      return <h2 {...props} id={id} className="margin-top-6 margin-bottom-2" />;
+    },
+    h3: ({node, ...props}: any) => {
+      const id = slugify(getNodeText(props.children));
+      return <h3 {...props} id={id} className="margin-top-5 margin-bottom-1" />;
+    },
     p: ({node, ...props}: any) => <p {...props} className="margin-bottom-3 line-height-sans-5" />,
     ul: ({node, ...props}: any) => <ul {...props} className="markdown-list margin-left-2 margin-bottom-3" />,
     ol: ({node, ...props}: any) => <ol {...props} className="markdown-list-ordered margin-left-2 margin-bottom-3" />,

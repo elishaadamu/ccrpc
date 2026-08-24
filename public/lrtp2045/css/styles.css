@@ -178,7 +178,7 @@ body {
   margin: 0;
   background-color: #fff;
   color: #1b1b1b;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 article,
 aside,

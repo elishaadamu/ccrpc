@@ -55,8 +55,6 @@ export const navigation = [
     baseUrl: "/data",
     links: [
       { href: "/data/tpm", label: "System Performance Report" },
-      { href: "/data/models", label: "Data and Models" },
-      { href: "/data/tdm", label: "TDM Documentation" },
     ]
   }
 ];
