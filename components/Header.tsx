@@ -2,33 +2,53 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { Menu, X, ChevronDown } from 'lucide-react';
+import { navigation } from '@/lib/navigation';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const pathname = usePathname();
+  const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Close mobile menu when pathname changes
+  // Close menus when pathname changes
   useEffect(() => {
     setMobileMenuOpen(false);
+    setOpenDropdown(null);
   }, [pathname]);
 
-  const isPathActive = (path: string) => {
+  const isSectionActive = (baseUrl: string) => {
     if (!pathname) return false;
-    return pathname === path || pathname.startsWith(path + '/');
+    return pathname.startsWith(baseUrl);
   };
+
+  const isLinkActive = (href: string) => {
+    if (!pathname) return false;
+    return pathname === href || pathname === `${href}/`;
+  };
+
+  const handleMouseEnter = (title: string) => {
+    if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);
+    setOpenDropdown(title);
+  };
+
+  const handleMouseLeave = () => {
+    dropdownTimeoutRef.current = setTimeout(() => {
+      setOpenDropdown(null);
+    }, 250);
+  };
+
+  // Only show Public Involvement in the header navbar dropdown
+  const headerNav = navigation.filter(
+    (section) => section.title === "Public Involvement"
+  );
 
   return (
     <header className="site-navbar-header" role="banner">
       <div className="site-navbar-container">
-        {/* Brand Logo & Title */}
+        {/* Brand Title */}
         <Link href="/process/public-involvement" className="site-navbar-brand" aria-label="LRTP 2045 - Public Involvement">
-          <img 
-            src="/lrtp2045/img/cuuats-logo.svg" 
-            alt="CUUATS Logo" 
-            className="site-navbar-logo"
-          />
           <div className="site-navbar-titles">
             <span className="site-navbar-title-main">Long Range Transportation Plan 2045</span>
             <span className="site-navbar-title-sub">Champaign-Urbana Urbanized Area (CUUATS)</span>
@@ -38,14 +58,44 @@ export default function Header() {
         {/* Desktop Navigation Links */}
         <nav className="site-navbar-desktop-nav" aria-label="Main Navigation">
           <ul className="site-navbar-nav-list">
-            <li>
-              <Link 
-                href="/process/public-involvement"
-                className={`site-navbar-nav-link ${isPathActive('/process') ? 'is-active' : ''}`}
-              >
-                Public Involvement
-              </Link>
-            </li>
+            {headerNav.map((section) => {
+              const active = isSectionActive(section.baseUrl);
+              const isOpen = openDropdown === section.title;
+
+              return (
+                <li 
+                  key={section.title}
+                  className="site-navbar-dropdown-container"
+                  onMouseEnter={() => handleMouseEnter(section.title)}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <button
+                    type="button"
+                    className={`site-navbar-dropdown-toggle ${active ? 'is-active' : ''} ${isOpen ? 'is-open' : ''}`}
+                    onClick={() => setOpenDropdown(isOpen ? null : section.title)}
+                    aria-expanded={isOpen}
+                  >
+                    <span>{section.title}</span>
+                    <ChevronDown size={16} className={`dropdown-chevron ${isOpen ? 'rotate-180' : ''}`} />
+                  </button>
+
+                  {isOpen && (
+                    <div className="site-navbar-dropdown-menu">
+                      {section.links.map((link) => (
+                        <Link
+                          key={link.href}
+                          href={link.href}
+                          className={`site-navbar-dropdown-item ${isLinkActive(link.href) ? 'is-current' : ''}`}
+                          onClick={() => setOpenDropdown(null)}
+                        >
+                          {link.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </li>
+              );
+            })}
           </ul>
         </nav>
 
@@ -65,11 +115,6 @@ export default function Header() {
       <div className={`site-navbar-mobile-drawer ${mobileMenuOpen ? 'is-open' : ''}`}>
         <div className="site-navbar-mobile-header">
           <div className="site-navbar-mobile-brand">
-            <img 
-              src="/lrtp2045/img/cuuats-logo.svg" 
-              alt="CUUATS Logo" 
-              className="site-navbar-mobile-logo"
-            />
             <span className="site-navbar-mobile-title">LRTP 2045</span>
           </div>
           <button
@@ -84,15 +129,26 @@ export default function Header() {
 
         <nav className="site-navbar-mobile-nav">
           <ul className="site-navbar-mobile-list">
-            <li>
-              <Link 
-                href="/process/public-involvement"
-                className={`site-navbar-mobile-link ${isPathActive('/process') ? 'is-active' : ''}`}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Public Involvement
-              </Link>
-            </li>
+            {headerNav.map((section) => (
+              <li key={section.title} className="site-navbar-mobile-section">
+                <div className="site-navbar-mobile-section-title">
+                  {section.title}
+                </div>
+                <ul className="site-navbar-mobile-sublist">
+                  {section.links.map((link) => (
+                    <li key={link.href}>
+                      <Link 
+                        href={link.href}
+                        className={`site-navbar-mobile-link ${isLinkActive(link.href) ? 'is-active' : ''}`}
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
@@ -108,3 +164,4 @@ export default function Header() {
     </header>
   );
 }
+

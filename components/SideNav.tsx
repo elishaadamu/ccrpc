@@ -27,7 +27,7 @@ export default function SideNav({ items }: SideNavProps) {
             {item.subItems && item.subItems.length > 0 && (
               <ul className="usa-sidenav__sublist">
                 {item.subItems.map((sub, subIndex) => (
-                  <li key={subIndex} className="usa-sidenav__item">
+                  <li key={subIndex} className="usa-sidenav__sublist-item">
                     <Link href={sub.href}>{sub.label}</Link>
                   </li>
                 ))}

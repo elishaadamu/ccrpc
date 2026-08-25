@@ -146,7 +146,7 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
     bannerPath = "https://ccrpc.gitlab.io/lrtp2045/goals/overview/banner.jpg";
   } else if (slug[0] === "process") {
     bannerPath =
-      "https://ccrpc.gitlab.io/lrtp2045/process/public-involvement/banner.jpg";
+      `https://ccrpc.gitlab.io/lrtp2045/${slugPath}/banner.jpg`;
   } else if (slug[0] === "data" || slug[0] === "appendices") {
     bannerPath = "https://ccrpc.gitlab.io/lrtp2045/data/tpm/banner.jpg";
   }

@@ -605,7 +605,7 @@ body {
 
 .site-navbar-title-main {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.125rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: #112e51;
   letter-spacing: -0.01em;
@@ -613,10 +613,11 @@ body {
 }
 
 .site-navbar-title-sub {
-  font-size: 0.78rem;
+  font-size: 0.95rem;
   color: #64748b;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.25;
+  margin-top: 0.15rem;
 }
 
 .site-navbar-desktop-nav {
@@ -635,8 +636,8 @@ body {
 
 .site-navbar-nav-link {
   display: inline-block;
-  padding: 0.6rem 1.15rem;
-  font-size: 0.95rem;
+  padding: 0.75rem 1.35rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: #334155;
   text-decoration: none;
@@ -680,11 +681,11 @@ body {
   }
 
   .site-navbar-title-main {
-    font-size: 1rem;
+    font-size: 1.15rem;
   }
 
   .site-navbar-title-sub {
-    font-size: 0.72rem;
+    font-size: 0.82rem;
   }
 
   .site-navbar-logo {
@@ -696,7 +697,7 @@ body {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 18rem;
+  width: 20rem;
   max-width: 85vw;
   height: 100vh;
   background-color: #ffffff;
@@ -732,7 +733,7 @@ body {
 
 .site-navbar-mobile-title {
   font-weight: 700;
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   color: #112e51;
 }
 
@@ -762,8 +763,8 @@ body {
 
 .site-navbar-mobile-link {
   display: block;
-  padding: 0.85rem 1rem;
-  font-size: 1rem;
+  padding: 0.9rem 1.25rem;
+  font-size: 1.12rem;
   font-weight: 600;
   color: #334155;
   text-decoration: none;
@@ -777,12 +778,143 @@ body {
   background-color: #edf5fc;
 }
 
+.site-navbar-dropdown-container {
+  position: relative;
+  list-style: none;
+}
+
+.site-navbar-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  background-color: #112e51;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0.75rem 1.4rem;
+  font-size: 1.12rem;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  min-width: 280px;
+}
+
+.site-navbar-dropdown-toggle:hover {
+  background-color: #1a416e;
+  color: #ffffff;
+}
+
+.dropdown-chevron {
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.site-navbar-dropdown-toggle.is-open {
+  background-color: #112e51;
+  color: #ffffff;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.site-navbar-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #112e51;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28);
+  display: flex;
+  flex-direction: column;
+  padding: 0.4rem 0;
+  z-index: 1000;
+  animation: dropdownFadeIn 0.15s ease-out;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.site-navbar-dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.4rem;
+  color: #d9e2ec;
+  font-size: 1.06rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  transition: background-color 0.15s ease, color 0.15s ease, padding-left 0.15s ease;
+}
+
+.site-navbar-dropdown-item:hover {
+  background-color: #1c4578;
+  color: #ffffff;
+  text-decoration: none;
+  padding-left: 1.6rem;
+}
+
+.site-navbar-dropdown-item.is-current {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  font-weight: 600;
+  border-left-color: #00bde3;
+  text-decoration: none;
+}
+
+.site-navbar-mobile-section {
+  margin-bottom: 0.75rem;
+}
+
+.site-navbar-mobile-section-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.site-navbar-mobile-sublist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
 .site-navbar-mobile-backdrop {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(2px);
   z-index: 1999;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1[id], h2[id], h3[id], h4[id] {
+  scroll-margin-top: 85px;
 }
 
 /* ==========================================================================

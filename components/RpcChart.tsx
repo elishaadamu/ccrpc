@@ -25,10 +25,23 @@ interface RpcChartProps {
   source?: string;
   description?: string;
   stacked?: boolean;
+  xLabel?: string;
   yLabel?: string;
+  colors?: string;
 }
 
-const COLORS = ['#b22222', '#21b1e6', '#98cc4f', '#f99e28', '#494440', '#cf3e3e'];
+const DEFAULT_COLORS = ['#b22222', '#21b1e6', '#98cc4f', '#f99e28', '#494440', '#cf3e3e', '#7b4397', '#009688', '#3f51b5', '#e91e63'];
+
+const COLOR_MAP: Record<string, string> = {
+  orange: '#e66c37',
+  red: '#d9381e',
+  green: '#2e8540',
+  indigo: '#2e4594',
+  lime: '#7eb338',
+  blue: '#0071bc',
+  yellow: '#fdb81e',
+  black: '#212121',
+};
 
 const CustomTooltip = ({ active, payload, label }: any) => {
   if (active && payload && payload.length) {
@@ -40,28 +53,39 @@ const CustomTooltip = ({ active, payload, label }: any) => {
         borderRadius: '8px',
         color: '#fff',
         boxShadow: '0 4px 6px rgba(0,0,0,0.3)',
-        fontSize: '0.85rem'
+        fontSize: '0.85rem',
+        zIndex: 100
       }}>
-        <p className="label font-bold margin-bottom-1" style={{ fontSize: '1rem', borderBottom: '1px solid #555', paddingBottom: '4px' }}>{`${label}`}</p>
+        <p className="label font-bold margin-bottom-1" style={{ fontSize: '1rem', borderBottom: '1px solid #555', paddingBottom: '4px' }}>{`${label || ''}`}</p>
         <div className="tooltip-items">
-          {payload.map((item: any, index: number) => (
-            <div key={index} className="tooltip-item" style={{ 
-              display: 'flex', 
-              alignItems: 'center', 
-              gap: '8px',
-              padding: '2px 0'
-            }}>
-              <span style={{ 
-                width: '12px', 
-                height: '12px', 
-                backgroundColor: item.fill, 
-                display: 'inline-block',
-                borderRadius: '2px'
-              }}></span>
-              <span style={{ color: '#eee' }}>{`${item.name}:`}</span>
-              <span className="font-bold">{`${item.value}`}</span>
-            </div>
-          ))}
+          {payload.map((item: any, index: number) => {
+            let displayVal = item.value;
+            if (typeof item.value === 'number') {
+              if (item.value <= 1 && item.value > 0) {
+                displayVal = `${(item.value * 100).toFixed(1)}%`;
+              } else {
+                displayVal = item.value.toLocaleString();
+              }
+            }
+            return (
+              <div key={index} className="tooltip-item" style={{ 
+                display: 'flex', 
+                alignItems: 'center', 
+                gap: '8px',
+                padding: '2px 0'
+              }}>
+                <span style={{ 
+                  width: '12px', 
+                  height: '12px', 
+                  backgroundColor: item.fill, 
+                  display: 'inline-block',
+                  borderRadius: '2px'
+                }}></span>
+                <span style={{ color: '#eee' }}>{`${item.name}:`}</span>
+                <span className="font-bold">{`${displayVal}`}</span>
+              </div>
+            );
+          })}
         </div>
       </div>
     );
@@ -76,12 +100,19 @@ export default function RpcChart({
   source, 
   description,
   stacked = false,
-  yLabel
+  xLabel,
+  yLabel,
+  colors
 }: RpcChartProps) {
   const [data, setData] = useState<any[]>([]);
   const [headers, setHeaders] = useState<string[]>([]);
+  const [categoryKey, setCategoryKey] = useState<string>('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+  const palette = colors
+    ? colors.split(',').map(c => c.trim()).map(c => COLOR_MAP[c.toLowerCase()] || c)
+    : DEFAULT_COLORS;
 
   useEffect(() => {
     async function fetchData() {
@@ -98,11 +129,16 @@ export default function RpcChart({
               const rawData = results.data as any[];
               const firstRow = rawData[0];
               const keys = Object.keys(firstRow);
+              const firstKey = keys[0];
               const dataKeys = keys.slice(1);
+              const activeCatKey = (firstKey === '' || firstKey === undefined) ? 'category' : firstKey;
 
               // Clean data: strip % and other non-numeric chars for Recharts
               const cleanedData = rawData.map(row => {
                 const newRow = { ...row };
+                if (firstKey === '' || firstKey === undefined) {
+                  newRow['category'] = row[''];
+                }
                 dataKeys.forEach(key => {
                   if (typeof newRow[key] === 'string') {
                     const cleaned = newRow[key].replace(/[^\d.-]/g, '');
@@ -119,6 +155,7 @@ export default function RpcChart({
                 return newRow;
               });
 
+              setCategoryKey(activeCatKey);
               setHeaders(dataKeys);
               setData(cleanedData);
             }
@@ -141,8 +178,6 @@ export default function RpcChart({
   if (loading) return <div className="usa-alert usa-alert--info"><div className="usa-alert__body"><p className="usa-alert__text">Loading chart...</p></div></div>;
   if (error) return <div className="usa-alert usa-alert--error"><div className="usa-alert__body"><h3 className="usa-alert__heading">Chart Error</h3><p className="usa-alert__text">{error} (URL: {url})</p></div></div>;
   if (data.length === 0) return <div className="usa-alert usa-alert--warning"><div className="usa-alert__body"><p className="usa-alert__text">No data available for chart.</p></div></div>;
-
-  const categoryKey = Object.keys(data[0])[0];
 
   const renderChart = () => {
     const commonProps = {
@@ -184,7 +219,7 @@ export default function RpcChart({
                 key={header} 
                 type="monotone" 
                 dataKey={header} 
-                stroke={COLORS[index % COLORS.length]} 
+                stroke={palette[index % palette.length]} 
                 strokeWidth={3}
                 dot={{ r: 4, strokeWidth: 2, fill: '#fff' }}
                 activeDot={{ r: 8, strokeWidth: 0 }} 
@@ -207,7 +242,7 @@ export default function RpcChart({
               label={({ name, percent }) => `${name}: ${((percent || 0) * 100).toFixed(0)}%`}
             >
               {data.map((entry, index) => (
-                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                <Cell key={`cell-${index}`} fill={palette[index % palette.length]} />
               ))}
             </Pie>
             <Tooltip content={<CustomTooltip />} />
@@ -220,6 +255,54 @@ export default function RpcChart({
               formatter={(value: string) => <span style={{ color: '#555', paddingRight: '15px', fontWeight: 500 }}>{value}</span>}
             />
           </PieChart>
+        );
+      case 'horizontalbar':
+        return (
+          <BarChart 
+            data={data} 
+            layout="vertical"
+            margin={{ top: 30, right: 30, left: 90, bottom: 20 }}
+            barCategoryGap="15%"
+          >
+            <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="#f5f5f5" />
+            <XAxis 
+              type="number"
+              axisLine={{ stroke: '#999' }}
+              tickLine={true}
+              tick={{ fill: '#666', fontSize: 12 }}
+              tickFormatter={(v) => typeof v === 'number' && v <= 1 ? `${Math.round(v * 100)}%` : v}
+              label={xLabel ? { value: xLabel, position: 'insideBottom', offset: -10, fill: '#333', fontWeight: 'bold' } : undefined}
+            />
+            <YAxis 
+              type="category"
+              dataKey={categoryKey} 
+              axisLine={{ stroke: '#999' }}
+              tickLine={false}
+              tick={{ fill: '#666', fontSize: 12 }}
+              width={130}
+            />
+            <Tooltip content={<CustomTooltip />} />
+            <Legend 
+              verticalAlign="top" 
+              align="center" 
+              wrapperStyle={{ 
+                paddingBottom: '40px',
+                paddingTop: '10px'
+              }}
+              iconType="rect"
+              iconSize={14}
+              formatter={(value: string) => <span style={{ color: '#555', paddingRight: '15px', fontWeight: 500 }}>{value}</span>}
+            />
+            {headers.map((header, index) => (
+              <Bar 
+                key={header} 
+                dataKey={header} 
+                stackId={stacked ? 'a' : undefined} 
+                fill={palette[index % palette.length]} 
+                radius={0}
+              />
+            ))}
+          </BarChart>
         );
       case 'bar':
       default:
@@ -255,7 +338,7 @@ export default function RpcChart({
                 key={header} 
                 dataKey={header} 
                 stackId={stacked ? 'a' : undefined} 
-                fill={COLORS[index % COLORS.length]} 
+                fill={palette[index % palette.length]} 
                 radius={0}
                 barSize={stacked ? 110 : 60}
               />
@@ -269,7 +352,7 @@ export default function RpcChart({
     <div className="rpc-chart-outer-container margin-y-8" style={{ width: '100%', minHeight: '550px' }}>
       {title && <h2 className="text-center margin-bottom-4 font-sans-xl" style={{ border: 'none', fontWeight: 700 }}>{title}</h2>}
       {description && <p className="usa-hint text-center margin-bottom-4">{description}</p>}
-      <div className="rpc-chart-canvas" style={{ width: '100%', height: '450px', position: 'relative' }}>
+      <div className="rpc-chart-canvas" style={{ width: '100%', height: '480px', position: 'relative' }}>
         <ResponsiveContainer width="100%" height="100%">
           {renderChart()}
         </ResponsiveContainer>
@@ -287,3 +370,4 @@ export default function RpcChart({
     </div>
   );
 }
+

@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 import RpcChart from './RpcChart';
 import RpcTable from './RpcTable';
 import Link from 'next/link';
@@ -33,6 +34,7 @@ export default function MarkdownRenderer({ content, baseUrl }: MarkdownRendererP
         <div key={`md-${lastIndex}`} className="usa-prose">
           <ReactMarkdown 
             remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeRaw]}
             components={markdownComponents(baseUrl, setLightboxImage)}
           >
             {before}
@@ -67,7 +69,9 @@ export default function MarkdownRenderer({ content, baseUrl }: MarkdownRendererP
             source={attrs.source} 
             description={attrs.description}
             stacked={attrs.stacked === 'true'}
-            yLabel={attrs['y-label']}
+            xLabel={attrs['x-label'] || attrs.xLabel}
+            yLabel={attrs['y-label'] || attrs.yLabel}
+            colors={attrs.colors}
           />
         </div>
       );
@@ -102,6 +106,7 @@ export default function MarkdownRenderer({ content, baseUrl }: MarkdownRendererP
       <div key={`md-${lastIndex}`} className="usa-prose">
         <ReactMarkdown 
           remarkPlugins={[remarkGfm]}
+          rehypePlugins={[rehypeRaw]}
           components={markdownComponents(baseUrl, setLightboxImage)}
         >
           {remaining}
