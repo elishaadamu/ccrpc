@@ -23,7 +23,7 @@ export default function Header() {
     <header className="site-navbar-header" role="banner">
       <div className="site-navbar-container">
         {/* Brand Logo & Title */}
-        <Link href="/" className="site-navbar-brand" aria-label="LRTP 2045 Home">
+        <Link href="/process/public-involvement" className="site-navbar-brand" aria-label="LRTP 2045 - Public Involvement">
           <img 
             src="/lrtp2045/img/cuuats-logo.svg" 
             alt="CUUATS Logo" 
@@ -44,14 +44,6 @@ export default function Header() {
                 className={`site-navbar-nav-link ${isPathActive('/process') ? 'is-active' : ''}`}
               >
                 Public Involvement
-              </Link>
-            </li>
-            <li>
-              <Link 
-                href="/data/tpm"
-                className={`site-navbar-nav-link ${isPathActive('/data') ? 'is-active' : ''}`}
-              >
-                System Performance Report
               </Link>
             </li>
           </ul>
@@ -94,29 +86,11 @@ export default function Header() {
           <ul className="site-navbar-mobile-list">
             <li>
               <Link 
-                href="/" 
-                className={`site-navbar-mobile-link ${pathname === '/' ? 'is-active' : ''}`}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link 
                 href="/process/public-involvement"
                 className={`site-navbar-mobile-link ${isPathActive('/process') ? 'is-active' : ''}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Public Involvement
-              </Link>
-            </li>
-            <li>
-              <Link 
-                href="/data/tpm"
-                className={`site-navbar-mobile-link ${isPathActive('/data') ? 'is-active' : ''}`}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                System Performance Report
               </Link>
             </li>
           </ul>

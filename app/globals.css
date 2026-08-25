@@ -454,9 +454,10 @@ body {
   .usa-layout-docs__sidenav {
     position: -webkit-sticky !important;
     position: sticky !important;
-    top: 2rem !important;
+    top: 5.5rem !important;
+    margin-top: 1rem;
     align-self: flex-start !important;
-    max-height: calc(100vh - 4rem) !important;
+    max-height: calc(100vh - 6.5rem) !important;
     overflow-y: auto !important;
     scrollbar-width: thin;
     z-index: 50;
