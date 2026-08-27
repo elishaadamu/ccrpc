@@ -826,12 +826,12 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  right: 0;
-  width: 100%;
+  min-width: 22rem;
+  max-width: 32rem;
+  width: max-content;
   background-color: #112e51;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
+  border-radius: 0 0 6px 6px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28);
   display: flex;
   flex-direction: column;
