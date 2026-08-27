@@ -12,11 +12,11 @@ Outreach may include online surveys and tools, public meetings, community events
 
 ## Social Media Strategy
 
-The Tri-Cities Area Metropolitan Planning Organization (TCAMPO) will use social media as an important tool to expand public awareness and encourage participation in the PLAN2050 long-range transportation planning process. TCAMPO will use its official Facebook (https://www.facebook.com/tricitiesareampo/) and Instagram (https://www.instagram.com/tri_cities_area_mpo/) accounts to promote public meetings, and the interactive comment portal (https://input-v2.netlify.app/) to review and comment on the plan.
+The Tri-Cities Area Metropolitan Planning Organization (TCAMPO) will use social media as an important tool to expand public awareness and encourage participation in the PLAN2050 long-range transportation planning process. TCAMPO will use its official [Facebook](https://www.facebook.com/tricitiesareampo/) and [Instagram](https://www.instagram.com/tri_cities_area_mpo/) accounts to promote public meetings, and the [interactive comment portal](https://input-v2.netlify.app/) to review and comment on the plan.
 
-* **Facebook:** [https://www.facebook.com/tricitiesareampo/](https://www.facebook.com/tricitiesareampo/)
-* **Instagram:** [https://www.instagram.com/tri_cities_area_mpo/](https://www.instagram.com/tri_cities_area_mpo/)
-* **Interactive Comment Portal:** [https://input-v2.netlify.app/](https://input-v2.netlify.app/)
+* [Facebook](https://www.facebook.com/tricitiesareampo/)
+* [Instagram](https://www.instagram.com/tri_cities_area_mpo/)
+* [Interactive Comment Portal](https://input-v2.netlify.app/)
 
 TCAMPO will maintain an active and engaging social media presence throughout the planning process. Posts will highlight transportation issues and priorities identified within the Tri-Cities area, share project information and transportation data, and encourage residents to provide input. Where appropriate, posts will include photographs, maps, graphics, and other visual materials to make transportation information accessible and encourage community discussion.
 
@@ -52,7 +52,7 @@ Public participation helps ensure that PLAN2050 reflects the transportation need
 ### How to Get Involved:
 
 * **Attend a Meeting:** Participate in public meetings, open houses, or virtual events.
-* **Submit Comments:** Share feedback through the online comment portal, interactive map, or email.
+* **Submit Comments:** Share feedback through the [online comment portal](https://input-v2.netlify.app/), interactive map, or email.
 * **Accessibility & Language Assistance:** Accessible meeting facilities and translation or LEP assistance are available upon request.
 
 Information about upcoming meetings, public comment opportunities, surveys, and PLAN2050 materials will be posted on this website as the plan progresses.

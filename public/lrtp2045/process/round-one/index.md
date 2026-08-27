@@ -16,4 +16,4 @@ A clear set of community priorities, transportation needs, goals, objectives, an
 
 PLAN2045 demonstrated the value of combining traditional and digital outreach. Short, mobile-friendly surveys, multiple communication channels, and targeted outreach can broaden participation, particularly among underserved communities. TCAMPO will continue to expand these approaches in PLAN2050.
 
-See Phase 1 report here ([https://craterpdc.org/wp-content/uploads/Plan2045_Technical_Appendices_Set-1-1.pdf](https://craterpdc.org/wp-content/uploads/Plan2045_Technical_Appendices_Set-1-1.pdf)).
+See Phase 1 report [here](https://craterpdc.org/wp-content/uploads/Plan2045_Technical_Appendices_Set-1-1.pdf).
