@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Long Range Transportation Plan 2045",
-  description: "Champaign-Urbana Long Range Transportation Plan (LRTP) 2045",
+  title: "Long-Range Transportation Plan (PLAN2050)",
+  description: "Tri-Cities Area MPO (TCAMPO) Long-Range Transportation Plan (PLAN2050)",
 };
 
 export default function RootLayout({

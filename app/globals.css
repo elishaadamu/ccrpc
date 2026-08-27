@@ -1156,26 +1156,92 @@ h1[id], h2[id], h3[id], h4[id] {
    ========================================================================== */
 .usa-hero__callout {
   max-width: 100% !important;
-  width: 100% !important;
   border-radius: 6px;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+  padding: 1.5rem 2rem !important;
 }
 
 @media (min-width: 40em) {
   .usa-hero__callout {
-    max-width: 46rem !important;
-    width: fit-content !important;
+    max-width: 26rem !important;
+    width: auto !important;
   }
 }
 
 @media (min-width: 64em) {
   .usa-hero__callout {
-    max-width: 60rem !important;
-    width: fit-content !important;
+    max-width: 28rem !important;
+    width: auto !important;
   }
 }
 
 .usa-hero__heading {
   word-wrap: break-word;
+}
+
+/* ==========================================================================
+   ORIGINAL REPO PROSE TYPOGRAPHY & FONT SIZES
+   ========================================================================== */
+.usa-prose > p,
+.usa-prose p {
+  line-height: 1.59762 !important;
+  margin-bottom: 0 !important;
+  margin-top: 1rem !important;
+  max-width: 68ex !important;
+  font-size: 1.01401rem !important;
+}
+
+.usa-prose > p:first-of-type,
+.usa-prose p:first-of-type {
+  margin-top: 0 !important;
+}
+
+.usa-prose > h1,
+.usa-prose h1 {
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif !important;
+  font-size: 2.47945rem !important;
+  line-height: 1.20994 !important;
+  font-weight: 700 !important;
+}
+
+.usa-prose > h2,
+.usa-prose h2 {
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif !important;
+  font-size: 1.98356rem !important;
+  line-height: 1.20994 !important;
+  font-weight: 700 !important;
+}
+
+.usa-prose > h3,
+.usa-prose h3 {
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif !important;
+  font-size: 1.3637rem !important;
+  line-height: 1.20994 !important;
+  font-weight: 700 !important;
+}
+
+.usa-prose > h4,
+.usa-prose h4 {
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif !important;
+  font-size: 0.99178rem !important;
+  line-height: 1.20994 !important;
+  font-weight: 700 !important;
+}
+
+.usa-prose > h5,
+.usa-prose h5 {
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif !important;
+  font-size: 0.92979rem !important;
+  line-height: 1.20994 !important;
+  font-weight: 700 !important;
+}
+
+.usa-prose > h6,
+.usa-prose h6 {
+  font-size: 0.82388rem !important;
+  line-height: 1.18343 !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.025em !important;
+  text-transform: uppercase !important;
 }
 

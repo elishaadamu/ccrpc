@@ -45,9 +45,9 @@ export const navigation = [
     baseUrl: "/process",
     links: [
       { href: "/process/public-involvement", label: "Overview" },
-      { href: "/process/round-one", label: "Phase 1: Visioning, Goals & Needs Assessment" },
-      { href: "/process/round-2", label: "Phase 2: Project Prioritization & Draft Conformity Report" },
-      { href: "/process/round-three", label: "Phase 3: Final Plan Adoption & Documentation" },
+      { href: "/process/round-one", label: "1. Visioning" },
+      { href: "/process/round-2", label: "2. Prioritization" },
+      { href: "/process/round-three", label: "3. Adoption" },
     ]
   },
   {

@@ -14,8 +14,8 @@ export default function Home() {
         <section className="usa-hero" style={{ backgroundImage: "url('/lrtp2045/banner.jpg')" }}>
           <div className="grid-container">
             <div className="usa-hero__callout">
-              <h1 className="usa-hero__heading">LRTP 2045</h1>
-              <p>As a community transportation policy document, the LRTP provides a regional transportation vision for 2045 to guide future transportation investments.</p>
+              <h1 className="usa-hero__heading">PLAN2050</h1>
+              <p>As a regional transportation policy document, PLAN2050 provides a long-range transportation vision through 2050 to guide future transportation investments across the region.</p>
             </div>
           </div>
         </section>
@@ -23,10 +23,8 @@ export default function Home() {
         <section className="grid-container usa-section">
           <div className="usa-width-one-whole">
             <div className="plandoc-content">
-              <p><em><strong>Welcome to the Champaign-Urbana Long Range Transportation Plan (LRTP) 2045!</strong></em></p>
-              <p>The LRTP 2045 was approved in December 2019 and will be in effect from 2020
-              through 2024. As a web-based plan, all LRTP 2045 content is contained in this
-              public website rather than on paper. Explore the key sections below:</p>
+              <p><em><strong>Welcome to the Tri-Cities Area MPO Long-Range Transportation Plan (PLAN2050)!</strong></em></p>
+              <p>PLAN2050 guides transportation decisions through 2050 and identifies investments and strategies that support mobility, safety, economic opportunity, and quality of life across the Tri-Cities region. Explore the key sections below:</p>
             </div>
           </div>
         </section>

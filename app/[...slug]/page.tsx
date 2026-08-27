@@ -82,6 +82,8 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
       .replace(/\s+/g, "-")}`,
   }));
 
+  const isProcessSection = slugPath.startsWith("process");
+
   const sideNavItems = section
     ? section.links.map((link) => {
         const isActive =
@@ -89,7 +91,7 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
         return {
           ...link,
           active: isActive,
-          subItems: isActive ? pageHeaders : [],
+          subItems: (isActive && !isProcessSection) ? pageHeaders : [],
         };
       })
     : [];

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link';
-import { Facebook, Instagram, Twitter, Youtube, Rss, Phone, Mail, MapPin, ArrowUp } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowUp } from 'lucide-react';
 
 export default function Footer() {
   const scrollToTop = (e: React.MouseEvent) => {
@@ -33,16 +33,16 @@ export default function Footer() {
             <div className="site-footer-col site-footer-brand-col">
               <div className="site-footer-logo-wrapper">
                 <img 
-                  src="/lrtp2045/img/cuuats-logo.svg" 
-                  alt="CUUATS Logo" 
+                  src="https://input-v2.netlify.app/MPO_Logo.jpg" 
+                  alt="TCAMPO Logo" 
                   className="site-footer-logo"
                 />
               </div>
               <h3 className="site-footer-agency-title">
-                Champaign Urbana Urbanized Area Transportation Study
+                Tri-Cities Area MPO (TCAMPO)
               </h3>
               <p className="site-footer-agency-desc">
-                CUUATS is the Metropolitan Planning Organization (MPO) responsible for the federally mandated continuous, comprehensive, and cooperative transportation planning process in the Champaign-Urbana area.
+                TCAMPO is one of the Metropolitan Planning Organizations (MPOs) responsible for carrying out the federally mandated continuous, comprehensive, and cooperative (3-C) transportation planning process for the Richmond urbanized area.
               </p>
             </div>
 
@@ -60,11 +60,6 @@ export default function Footer() {
                     Public Involvement
                   </Link>
                 </li>
-                <li>
-                  <Link href="/data/tpm" className="site-footer-nav-link">
-                    System Performance Report
-                  </Link>
-                </li>
               </ul>
             </div>
 
@@ -74,65 +69,15 @@ export default function Footer() {
               <div className="site-footer-contact-items">
                 <div className="site-footer-contact-item">
                   <MapPin size={18} className="site-footer-icon" />
-                  <span>Champaign County Regional Planning Commission<br />1776 E Washington St, Urbana, IL 61802</span>
+                  <span>Crater Planning District Commission<br />1964 Wakefield Street<br />Petersburg, VA 23805</span>
                 </div>
                 <div className="site-footer-contact-item">
                   <Phone size={18} className="site-footer-icon" />
-                  <a href="tel:+12173283313" className="site-footer-contact-link">(217) 328-3313</a>
+                  <a href="tel:+18048611666" className="site-footer-contact-link">804-861-1666</a>
                 </div>
                 <div className="site-footer-contact-item">
                   <Mail size={18} className="site-footer-icon" />
-                  <a href="mailto:cuuats-lrtp@ccrpc.org" className="site-footer-contact-link">cuuats-lrtp@ccrpc.org</a>
-                </div>
-              </div>
-
-              {/* Social Media Links */}
-              <div className="site-footer-social-wrapper">
-                <h5 className="site-footer-social-heading">Connect With Us</h5>
-                <div className="site-footer-social-icons">
-                  <a 
-                    href="https://www.facebook.com/tricitiesareampo/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="site-footer-social-btn"
-                    aria-label="Facebook"
-                  >
-                    <Facebook size={18} />
-                  </a>
-                  <a 
-                    href="https://www.instagram.com/tri_cities_area_mpo/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="site-footer-social-btn"
-                    aria-label="Instagram"
-                  >
-                    <Instagram size={18} />
-                  </a>
-                  <a 
-                    href="https://twitter.com/cuuats" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="site-footer-social-btn"
-                    aria-label="Twitter"
-                  >
-                    <Twitter size={18} />
-                  </a>
-                  <a 
-                    href="https://www.youtube.com/channel/UCUuJgNI211l8bczez5T5BkQ" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="site-footer-social-btn"
-                    aria-label="YouTube"
-                  >
-                    <Youtube size={18} />
-                  </a>
-                  <a 
-                    href="/lrtp2045/index.xml" 
-                    className="site-footer-social-btn"
-                    aria-label="RSS Feed"
-                  >
-                    <Rss size={18} />
-                  </a>
+                  <a href="mailto:office@craterpdc.org" className="site-footer-contact-link">office@craterpdc.org</a>
                 </div>
               </div>
             </div>
@@ -144,10 +89,10 @@ export default function Footer() {
       <div className="site-footer-bottom-bar">
         <div className="site-footer-container site-footer-bottom-flex">
           <p className="site-footer-copyright">
-            © {new Date().getFullYear()} Champaign County Regional Planning Commission (CCRPC) & CUUATS. All rights reserved.
+            © {new Date().getFullYear()} Tri-Cities Area MPO (TCAMPO). All rights reserved.
           </p>
           <div className="site-footer-bottom-links">
-            <span>Long Range Transportation Plan 2045</span>
+            <span>Long-Range Transportation Plan (PLAN2050)</span>
           </div>
         </div>
       </div>

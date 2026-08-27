@@ -195,7 +195,7 @@ function markdownComponents(baseUrl: string, setLightboxImage: (src: string) => 
       const id = slugify(getNodeText(props.children));
       return <h3 {...props} id={id} className="margin-top-5 margin-bottom-1" />;
     },
-    p: ({node, ...props}: any) => <p {...props} className="margin-bottom-3 line-height-sans-5" />,
+    p: ({node, ...props}: any) => <p {...props} />,
     ul: ({node, ...props}: any) => <ul {...props} className="markdown-list margin-left-2 margin-bottom-3" />,
     ol: ({node, ...props}: any) => <ol {...props} className="markdown-list-ordered margin-left-2 margin-bottom-3" />,
     li: ({node, ...props}: any) => <li {...props} className="markdown-list-item margin-bottom-1" />,
