@@ -40,7 +40,7 @@ export default function Home() {
                 </Link>
                 <div className="usa-media-block__body">
                   <h3 className="usa-graphic-list__heading">Public Involvement</h3>
-                  <p>LRTP outreach includes educating the public about the long range transportation planning process, raising awareness of existing transportation services, and providing opportunities for the public to inform the direction of planning efforts.</p>
+                  <p>PLAN2050 public involvement engages residents, businesses, community organizations, and regional partners across three key phases to guide transportation decisions through 2050 and ensure investments reflect community needs.</p>
                   <p>
                     <Link href="/process/public-involvement">Learn more <span className="usa-sr-only"> about Public Involvement</span></Link>
                   </p>

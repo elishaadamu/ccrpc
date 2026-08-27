@@ -110,13 +110,15 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
     heroTitle = h1Match[1];
     mainContent = mainContent.slice(h1Match[0].length).trim();
 
-    // 2. Extract the first paragraph after that H1 as heroDescription
-    const pMatch = mainContent.match(
-      /^([^#\r\n][^]*?)(?:\r?\n\r?\n|(?=\r?\n#)|$)/,
-    );
-    if (pMatch) {
-      heroDescription = pMatch[1].trim();
-      mainContent = mainContent.slice(pMatch[0].length).trim();
+    // 2. Extract the first paragraph after that H1 as heroDescription (except for process section)
+    if (slug[0] !== "process") {
+      const pMatch = mainContent.match(
+        /^([^#\r\n][^]*?)(?:\r?\n\r?\n|(?=\r?\n#)|$)/,
+      );
+      if (pMatch) {
+        heroDescription = pMatch[1].trim();
+        mainContent = mainContent.slice(pMatch[0].length).trim();
+      }
     }
 
     // 3. Clean up any duplicate H1s that match the heroTitle at the top of remaining content
@@ -145,8 +147,13 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
   } else if (slug[0] === "goals") {
     bannerPath = "https://ccrpc.gitlab.io/lrtp2045/goals/overview/banner.jpg";
   } else if (slug[0] === "process") {
-    bannerPath =
-      `https://ccrpc.gitlab.io/lrtp2045/${slugPath}/banner.jpg`;
+    if (fs.existsSync(path.join(process.cwd(), "public", "lrtp2045", ...slug, "banner.jpg"))) {
+      bannerPath = `/lrtp2045/${slugPath}/banner.jpg`;
+    } else if (fs.existsSync(path.join(process.cwd(), "public", "lrtp2045", slug[0], "banner.jpg"))) {
+      bannerPath = `/lrtp2045/${slug[0]}/banner.jpg`;
+    } else {
+      bannerPath = `https://ccrpc.gitlab.io/lrtp2045/${slugPath}/banner.jpg`;
+    }
   } else if (slug[0] === "data" || slug[0] === "appendices") {
     bannerPath = "https://ccrpc.gitlab.io/lrtp2045/data/tpm/banner.jpg";
   }

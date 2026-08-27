@@ -1,46 +1,58 @@
-# Public Involvement
+# PLAN2050 Public Involvement Process
 
-LRTP outreach includes educating the public about the long range transportation
-planning process, raising awareness of existing transportation services, and
-providing opportunities for the public to inform the direction of planning
-efforts. Special emphasis is placed on public input because the transportation
-system affects every resident, employee, and visitor in the community.
+## Overview
 
-[![](/lrtp2045/process/public-involvement/banner_huf9119832ff0f6b8ec876bdd3c8fee63f_1476249_124x124_fill_q75_box_center.jpg)](https://ccrpc.gitlab.io/lrtp2045/process/public-involvement/)
+The Tri-Cities Area MPO (TCAMPO) is preparing PLAN2050, the region’s long-range transportation plan. The plan will guide transportation decisions through 2050 and identify investments and strategies that support mobility, safety, economic opportunity, and quality of life across the region.
 
-### Overview
+Public involvement is an important part of the planning process. PLAN2050 will affect how residents, employees, businesses, and visitors travel throughout the region, and community input will help ensure the plan reflects local needs, travel experiences, and priorities.
 
-Outdoor concert at Prairie Park, Urbana, August 8th, 2018 Image: CUUATS The LRTP 2045 planning process provided multiple opportunities for public involvement during the plan’s development. CUUATS staff advertised these opportunities via the Champaign County Regional Planning Commission website and local news outlets. For the LRTP 2045, public outreach efforts included an online interactive map tool, surveys, videos, a social media presence, and outreach tables at popular community events.
+Federal regulations require MPOs to maintain a continuous and proactive public involvement process throughout the development of long-range transportation plans. As part of PLAN2050, the MPO will engage residents, businesses, community organizations, and other stakeholders through three key phases: identifying transportation needs and priorities; reviewing proposed strategies and investments; and providing comments on the draft plan before final adoption.
 
-[Learn more
- about Overview](https://ccrpc.gitlab.io/lrtp2045/process/public-involvement/)
+Outreach may include online surveys and tools, public meetings, community events, social media, and coordination with local partners. Special emphasis will be placed on reaching underrepresented populations and providing accessible opportunities for participation.
 
-[![](/lrtp2045/process/round-one/banner_hu41f1d2d228c2d4b6aefe63f0289b33ed_230005_124x124_fill_q75_box_center.jpg)](https://ccrpc.gitlab.io/lrtp2045/process/round-one/)
+## Social Media Strategy
 
-### Phase One Public Outreach
+The Tri-Cities Area Metropolitan Planning Organization (TCAMPO) will use social media as an important tool to expand public awareness and encourage participation in the PLAN2050 long-range transportation planning process. TCAMPO will use its official Facebook (https://www.facebook.com/tricitiesareampo/) and Instagram (https://www.instagram.com/tri_cities_area_mpo/) accounts to promote public meetings, and the interactive comment portal (https://input-v2.netlify.app/) to review and comment on the plan.
 
-June 2018 to October 2018 The first round of public outreach took place between June and October of 2018. CUUATS staff prepared a table for the public at 17 community events during the initial outreach period. During this period, public input focused on gathering information about current transportation usage patterns, existing transportation network conditions, and priorities for the future of transportation.
-June 2018 Events 23 - Jettie Rhodes Neighborhood Day at King Park, Urbana 24 - Outdoor Concert at Garden Hills Park, Champaign
+* **Facebook:** [https://www.facebook.com/tricitiesareampo/](https://www.facebook.com/tricitiesareampo/)
+* **Instagram:** [https://www.instagram.com/tri_cities_area_mpo/](https://www.instagram.com/tri_cities_area_mpo/)
+* **Interactive Comment Portal:** [https://input-v2.netlify.app/](https://input-v2.netlify.app/)
 
-[Learn more
- about Phase One Public Outreach](https://ccrpc.gitlab.io/lrtp2045/process/round-one/)
+TCAMPO will maintain an active and engaging social media presence throughout the planning process. Posts will highlight transportation issues and priorities identified within the Tri-Cities area, share project information and transportation data, and encourage residents to provide input. Where appropriate, posts will include photographs, maps, graphics, and other visual materials to make transportation information accessible and encourage community discussion.
 
-[![](/lrtp2045/process/round-2/banner_hua9554520c52363b88960e89122bc5ff4_232611_124x124_fill_q75_box_center.jpg)](https://ccrpc.gitlab.io/lrtp2045/process/round-2/)
+All social media posts will direct residents to the PLAN2050 website and interactive comment portal, providing a convenient way for individuals to learn about the planning process and submit comments. TCAMPO will monitor engagement metrics, such as post reach, views, reactions, comments, shares, and clicks on online engagement tools, to assess the effectiveness of its outreach efforts and identify opportunities to reach additional audiences.
 
-### Phase Two Public Outreach
+## Community Partners and Libraries
 
-September 2019 CUUATS staff collected the second round of public input in fall 2019 at 10 community events. Residents completed surveys regarding their concerns and interests about the LRTP future vision, such as lower greenhouse gas emissions, lower personal transportation costs, and higher quality transportation infrastructure. A digital survey was posted online to provide access to residents who were unable to meet with staff in-person.
-September 2019 Events 6 - Jettie Rhodes Neighborhood Day at King Park, Urbana 7 - Outdoor Concert at Garden Hills Park, Champaign
+TCAMPO will work with member jurisdictions, transportation agencies, community organizations, businesses, educational institutions, and other regional partners to expand the reach of PLAN2050 public involvement activities. Partners will be encouraged to share PLAN2050 announcements, public meeting information, surveys, and other engagement opportunities through their websites, newsletters, social media accounts, and other communication channels.
 
-[Learn more
- about Phase Two Public Outreach](https://ccrpc.gitlab.io/lrtp2045/process/round-2/)
+To provide opportunities for residents who may have limited access to online engagement tools, PLAN2050 information and outreach materials will also be made available through local libraries and community locations, including:
 
-[![](/lrtp2045/process/round-three/banner_hu2ee0b9d1ec2ed9dffd128a678e1b7e6d_238122_124x124_fill_q75_box_center.jpg)](https://ccrpc.gitlab.io/lrtp2045/process/round-three/)
+* Petersburg Library
+* Colonial Heights Library
+* Hopewell Library
+* Ettrick-Matoaca Library
+* Rohoic Library
+* Prince George Library
 
-### Phase Three Public Outreach
+This coordinated approach will help TCAMPO reach residents who may not regularly participate in traditional public meetings and provide multiple opportunities for community members to participate throughout the PLAN2050 planning process.
 
-The third and last phase of LRTP 2045 public involvement is a 30-day review period for the DRAFT LRTP 2045 from Wednesday October 23 to Thursday November 21, 2019. In addition to promoting this website for review, printed copies of the website are available at the following locations:
-Champaign Public Library Urbana Free Library Illinois Terminal in Champaign Savoy Municipal Center Tolono Public Library Mahomet Administration Building Champaign County Regional Planning Commission in Urbana Input received and updates made to the LRTP 2045 during the public comment period will be documented in this section as they are processed by CUUATS staff.
+## News Coverage
 
-[Learn more
- about Phase Three Public Outreach](https://ccrpc.gitlab.io/lrtp2045/process/round-three/)
+TCAMPO will use local and regional news media to increase awareness of PLAN2050 and public involvement opportunities. Public notices will be provided to local newspapers, online news outlets, and other appropriate media organizations.
+
+Primary newspaper outlets will include the Petersburg Progress-Index and the Richmond Times-Dispatch. News coverage will be used to promote public meetings and opportunities for residents to review and comment on PLAN2050.
+
+TCAMPO will also coordinate with member jurisdictions and regional partners to amplify PLAN2050 announcements through their established communication channels. This multi-channel approach will help ensure that residents throughout the region have multiple opportunities to learn about the planning process and provide meaningful input.
+
+## Your Voice Matters
+
+Public participation helps ensure that PLAN2050 reflects the transportation needs and priorities of the Tri-Cities region. Residents, businesses, community organizations, and other stakeholders are encouraged to participate throughout the planning process.
+
+### How to Get Involved:
+
+* **Attend a Meeting:** Participate in public meetings, open houses, or virtual events.
+* **Submit Comments:** Share feedback through the online comment portal, interactive map, or email.
+* **Accessibility & Language Assistance:** Accessible meeting facilities and translation or LEP assistance are available upon request.
+
+Information about upcoming meetings, public comment opportunities, surveys, and PLAN2050 materials will be posted on this website as the plan progresses.

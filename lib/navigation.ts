@@ -45,9 +45,9 @@ export const navigation = [
     baseUrl: "/process",
     links: [
       { href: "/process/public-involvement", label: "Overview" },
-      { href: "/process/round-one", label: "Phase One Public Outreach" },
-      { href: "/process/round-2", label: "Phase Two Public Outreach" },
-      { href: "/process/round-three", label: "Phase Three Public Outreach" },
+      { href: "/process/round-one", label: "Phase 1" },
+      { href: "/process/round-2", label: "Phase 2" },
+      { href: "/process/round-three", label: "Phase 3" },
     ]
   },
   {

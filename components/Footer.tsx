@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link';
-import { Facebook, Twitter, Youtube, Rss, Phone, Mail, MapPin, ArrowUp } from 'lucide-react';
+import { Facebook, Instagram, Twitter, Youtube, Rss, Phone, Mail, MapPin, ArrowUp } from 'lucide-react';
 
 export default function Footer() {
   const scrollToTop = (e: React.MouseEvent) => {
@@ -91,13 +91,22 @@ export default function Footer() {
                 <h5 className="site-footer-social-heading">Connect With Us</h5>
                 <div className="site-footer-social-icons">
                   <a 
-                    href="https://www.facebook.com/CUUATS/" 
+                    href="https://www.facebook.com/tricitiesareampo/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="site-footer-social-btn"
                     aria-label="Facebook"
                   >
                     <Facebook size={18} />
+                  </a>
+                  <a 
+                    href="https://www.instagram.com/tri_cities_area_mpo/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="site-footer-social-btn"
+                    aria-label="Instagram"
+                  >
+                    <Instagram size={18} />
                   </a>
                   <a 
                     href="https://twitter.com/cuuats" 
