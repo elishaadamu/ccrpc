@@ -46,22 +46,7 @@ export default function Footer() {
               </p>
             </div>
 
-            {/* Column 2: Quick Links */}
-            <div className="site-footer-col">
-              <h4 className="site-footer-section-title">Plan Navigation</h4>
-              <ul className="site-footer-nav-list">
-                <li>
-                  <Link href="/" className="site-footer-nav-link">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/process/public-involvement" className="site-footer-nav-link">
-                    Public Involvement
-                  </Link>
-                </li>
-              </ul>
-            </div>
+
 
             {/* Column 3: Contact & Info */}
             <div className="site-footer-col">
