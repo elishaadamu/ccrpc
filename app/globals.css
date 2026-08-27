@@ -825,13 +825,14 @@ body {
 .site-navbar-dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
-  min-width: 22rem;
-  max-width: 32rem;
+  right: 0;
+  left: auto;
+  min-width: 25rem;
+  max-width: min(34rem, 90vw);
   width: max-content;
   background-color: #112e51;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 0 0 6px 6px;
+  border-radius: 6px 0 6px 6px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28);
   display: flex;
   flex-direction: column;
@@ -856,8 +857,10 @@ body {
   align-items: center;
   padding: 0.75rem 1.4rem;
   color: #d9e2ec;
-  font-size: 1.06rem;
+  font-size: 1.02rem;
   font-weight: 500;
+  line-height: 1.35;
+  white-space: normal;
   text-decoration: none;
   border-left: 3px solid transparent;
   transition: background-color 0.15s ease, color 0.15s ease, padding-left 0.15s ease;
